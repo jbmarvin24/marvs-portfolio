@@ -1,10 +1,7 @@
+import Hero from './components/Hero';
+
 function App() {
-  return (
-    <>
-      <button className="btn btn-primary">Button</button>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
-  );
+  return <Hero />;
 }
 
 export default App;
