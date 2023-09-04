@@ -1,7 +1,8 @@
-import Hero from './components/Hero';
+import About from './components/About';
+// import Hero from './components/Hero';
 
 function App() {
-  return <Hero />;
+  return <About />;
 }
 
 export default App;
