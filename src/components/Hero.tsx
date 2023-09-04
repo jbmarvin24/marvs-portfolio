@@ -1,5 +1,7 @@
 import { FunctionComponent } from 'react';
 import { BiSend } from 'react-icons/bi';
+import { CgMouse } from 'react-icons/cg';
+import { FiArrowDown } from 'react-icons/fi';
 
 interface HeroProps {}
 
@@ -22,6 +24,11 @@ const Hero: FunctionComponent<HeroProps> = () => {
             <BiSend className="w-5 h-5" />
           </button>
         </div>
+      </div>
+      <div className="mt-24 md:flex flex-row gap-2 items-center ml-28 hidden">
+        <CgMouse className="w-6 h-6 text-primary" />
+        <p className="text-sm">Scroll down</p>
+        <FiArrowDown className="text-primary" />
       </div>
     </section>
   );
