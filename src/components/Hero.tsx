@@ -5,12 +5,12 @@ interface HeroProps {}
 
 const Hero: FunctionComponent<HeroProps> = () => {
   return (
-    <section>
-      <div className="text-center py-10">
-        <div className="inline-block mx-auto mr-5">
-          <div className="w-64 h-64 bg-red-400"></div>
+    <section className="py-10 px-10 max-w-4xl mx-auto">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-8 mt-10">
+        <div className="md:ml-auto">
+          <div className="w-64 h-64 bg-red-400 rounded-md"></div>
         </div>
-        <div className="inline-block mx-auto text-left w-96">
+        <div className="text-left">
           <h1 className="text-5xl font-semibold my-3">Hi, I'm Marvin</h1>
           <h3 className="my-3 font-medium text-lg">Fullstack developer</h3>
           <p className="text-sm">
