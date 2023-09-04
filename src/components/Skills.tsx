@@ -18,7 +18,7 @@ const Skills: FunctionComponent<SkillsProps> = () => {
     <section className="py-10 md:px-32 px-10 max-w-5xl mx-auto">
       <h1 className="text-4xl font-semibold text-center mb-1">Skills</h1>
       <p className="text-sm text-center">My technical level</p>
-      <div className="mt-10 flex flex-row gap-16">
+      <div className="mt-10 flex md:flex-row flex-col gap-16">
         <div>
           <div className="flex flex-row gap-4">
             <BiCodeAlt className="text-primary w-10 h-10 my-auto" />
