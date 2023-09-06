@@ -1,12 +1,10 @@
 import { FunctionComponent, useState } from 'react';
 import TechStackProgress from './common/TechStackProgress';
 import { BiCodeAlt } from 'react-icons/bi';
-import {
-  MdOutlineKeyboardArrowUp,
-  MdOutlineKeyboardArrowDown,
-} from 'react-icons/md';
+import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { PiBooksDuotone } from 'react-icons/pi';
 import { BsCheckLg } from 'react-icons/bs';
+import Collapsible from './common/Collapsible';
 
 interface SkillsProps {}
 
@@ -18,7 +16,7 @@ const Skills: FunctionComponent<SkillsProps> = () => {
     <section className="py-10 md:px-32 px-10 max-w-5xl mx-auto">
       <h1 className="text-4xl font-semibold text-center mb-1">Skills</h1>
       <p className="text-sm text-center">My technical level</p>
-      <div className="mt-10 flex md:flex-row flex-col gap-16">
+      <div className="mt-10 flex md:flex-row flex-col md:gap-28 gap-10">
         <div>
           <div className="flex flex-row gap-4">
             <BiCodeAlt className="text-primary w-10 h-10 my-auto" />
@@ -30,24 +28,22 @@ const Skills: FunctionComponent<SkillsProps> = () => {
             </div>
 
             <button onClick={() => sethardSkillOpen(!hardSkillOpen)}>
-              {hardSkillOpen ? (
-                <MdOutlineKeyboardArrowUp className="text-primary w-8 h-8 my-auto" />
-              ) : (
-                <MdOutlineKeyboardArrowDown className="text-primary w-8 h-8 my-auto" />
-              )}
+              <MdOutlineKeyboardArrowDown
+                className={`text-primary w-8 h-8 my-auto ${
+                  hardSkillOpen ? 'rotate-180' : ''
+                } transition ease-in-out duration-300`}
+              />
             </button>
           </div>
-          {hardSkillOpen && (
-            <div className="mt-14 flex flex-col max-w-xs mx-auto gap-6">
-              <TechStackProgress name="Typescript" value={80} />
-              <TechStackProgress name="C#" value={80} />
-              <TechStackProgress name="ASP.NET MVC + API" value={70} />
-              <TechStackProgress name="React JS" value={85} />
-              <TechStackProgress name="Nest JS" value={80} />
-              <TechStackProgress name="SQL" value={90} />
-              <TechStackProgress name="HTML+CSS" value={80} />
-            </div>
-          )}
+          <Collapsible isOpen={hardSkillOpen}>
+            <TechStackProgress name="Typescript" value={80} />
+            <TechStackProgress name="C#" value={80} />
+            <TechStackProgress name="ASP.NET MVC + API" value={70} />
+            <TechStackProgress name="React JS" value={85} />
+            <TechStackProgress name="Nest JS" value={80} />
+            <TechStackProgress name="SQL" value={90} />
+            <TechStackProgress name="HTML+CSS" value={80} />
+          </Collapsible>
         </div>
 
         <div>
@@ -62,15 +58,15 @@ const Skills: FunctionComponent<SkillsProps> = () => {
             <button
               onClick={() => setAdditionalSkillsOpen(!AdditionalSkillsOpen)}
             >
-              {AdditionalSkillsOpen ? (
-                <MdOutlineKeyboardArrowUp className="text-primary w-8 h-8 my-auto" />
-              ) : (
-                <MdOutlineKeyboardArrowDown className="text-primary w-8 h-8 my-auto" />
-              )}
+              <MdOutlineKeyboardArrowDown
+                className={`text-primary w-8 h-8 my-auto ${
+                  AdditionalSkillsOpen ? 'rotate-180' : ''
+                } transition ease-in-out duration-300`}
+              />
             </button>
           </div>
-          {AdditionalSkillsOpen && (
-            <div className="mt-14 flex flex-col max-w-xs mx-auto gap-6">
+          <Collapsible isOpen={AdditionalSkillsOpen}>
+            <div className="flex flex-col max-w-xs gap-6">
               <p className="text-sm text-gray-400">Libraries & Tools</p>
               <p>
                 <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
@@ -108,7 +104,7 @@ const Skills: FunctionComponent<SkillsProps> = () => {
                 Power BI
               </p>
             </div>
-          )}
+          </Collapsible>
         </div>
       </div>
     </section>
