@@ -1,9 +1,11 @@
 // import About from './components/About';
 // import Hero from './components/Hero';
-import Skills from './components/Skills';
+// import Skills from './components/Skills';
+
+import Portfolio from './components/Portfolio';
 
 function App() {
-  return <Skills />;
+  return <Portfolio />;
 }
 
 export default App;
