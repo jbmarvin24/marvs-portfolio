@@ -19,7 +19,7 @@ const Hero: FunctionComponent<HeroProps> = () => {
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi,
             molestias.
           </p>
-          <button className="btn btn-primary my-6">
+          <button className="btn btn-primary my-6 capitalize">
             Contact Me
             <BiSend className="w-5 h-5" />
           </button>
