@@ -2,11 +2,12 @@
 // import Hero from './components/Hero';
 // import Skills from './components/Skills';
 // import Portfolio from './components/Portfolio';
+// import ContactMe from './components/ContactMe';
 
-import ContactMe from './components/ContactMe';
+import Footer from './components/Footer';
 
 function App() {
-  return <ContactMe />;
+  return <Footer />;
 }
 
 export default App;
