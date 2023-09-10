@@ -7,7 +7,7 @@ interface ContactMeProps {}
 
 const ContactMe: FunctionComponent<ContactMeProps> = () => {
   return (
-    <section className="px-10 py-20 max-w-5xl mx-auto">
+    <section className="px-10 md:py-20 py-14 max-w-5xl mx-auto">
       <h1 className="text-4xl font-semibold text-center mb-1 text-slate-200">
         Contact Me
       </h1>

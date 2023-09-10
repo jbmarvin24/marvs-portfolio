@@ -12,7 +12,7 @@ const TechStackProgress: FunctionComponent<TechStackProgressProps> = ({
   return (
     <div>
       <div className="flex mb-[-3px]">
-        <p className="grow font-semibold">{name}</p>
+        <p className="grow text-white">{name}</p>
         <p className="ml-3 text-gray-400">{value}%</p>
       </div>
       <progress

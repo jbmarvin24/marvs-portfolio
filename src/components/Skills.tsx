@@ -13,15 +13,17 @@ const Skills: FunctionComponent<SkillsProps> = () => {
   const [AdditionalSkillsOpen, setAdditionalSkillsOpen] = useState(false);
 
   return (
-    <section className="py-10 md:px-32 px-10 max-w-5xl mx-auto">
-      <h1 className="text-4xl font-semibold text-center mb-1">Skills</h1>
+    <section className="md:pt-20 p-10 pt-14 md:px-32 px-10 max-w-5xl mx-auto">
+      <h1 className="text-4xl font-semibold text-center mb-1 text-white">
+        Skills
+      </h1>
       <p className="text-sm text-center">My technical level</p>
       <div className="mt-10 flex md:flex-row flex-col md:gap-28 gap-10">
-        <div>
+        <div className="md:mx-0 mx-auto">
           <div className="flex flex-row gap-4">
             <BiCodeAlt className="text-primary w-10 h-10 my-auto" />
             <div>
-              <h3 className="text-xl font-semibold">Hard skills</h3>
+              <h3 className="text-xl font-semibold text-white">Hard skills</h3>
               <p className="text-sm text-gray-400">
                 Technologies I'm experienced with
               </p>
@@ -36,23 +38,24 @@ const Skills: FunctionComponent<SkillsProps> = () => {
             </button>
           </div>
           <Collapsible isOpen={hardSkillOpen}>
-            <div className="pb-5 pt-8 flex flex-col max-w-xs mx-auto gap-6">
-              <TechStackProgress name="Typescript" value={80} />
-              <TechStackProgress name="C#" value={80} />
-              <TechStackProgress name="ASP.NET MVC + API" value={70} />
-              <TechStackProgress name="React JS" value={85} />
-              <TechStackProgress name="Nest JS" value={80} />
+            <div className="pb-5 pt-8 ml-14 flex flex-col max-w-xs mx-auto gap-6">
+              <TechStackProgress name="Typescript" value={85} />
+              <TechStackProgress name="C#" value={85} />
+              <TechStackProgress name="ASP.NET MVC + API" value={80} />
+              <TechStackProgress name="React JS + Nest JS" value={80} />
               <TechStackProgress name="SQL" value={90} />
-              <TechStackProgress name="HTML+CSS" value={80} />
+              <TechStackProgress name="HTML + CSS" value={80} />
             </div>
           </Collapsible>
         </div>
 
-        <div>
+        <div className="md:mx-0 mx-auto">
           <div className="flex flex-row gap-4">
             <PiBooksDuotone className="text-primary w-10 h-10 my-auto" />
             <div>
-              <h3 className="text-xl font-semibold">Additional skills</h3>
+              <h3 className="text-xl font-semibold text-white">
+                Additional skills
+              </h3>
               <p className="text-sm text-gray-400">
                 What helps me to perform at my best
               </p>
@@ -68,15 +71,15 @@ const Skills: FunctionComponent<SkillsProps> = () => {
             </button>
           </div>
           <Collapsible isOpen={AdditionalSkillsOpen}>
-            <div className="pb-5 pt-8 flex flex-col max-w-xs mx-auto gap-6">
+            <div className="pb-5 pt-8 flex flex-col max-w-xs mx-auto gap-6 ml-14 text-white">
               <p className="text-sm text-gray-400">Libraries & Tools</p>
-              <p>
-                <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
-                Express JS
-              </p>
               <p>
                 <BsCheckLg className="text-primary inline-block w-6 h-6" /> Git
                 + GitHub
+              </p>
+              <p>
+                <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
+                Docker + DockerHub
               </p>
               <p className="text-sm text-gray-400">Databases</p>
               <p>
@@ -94,11 +97,11 @@ const Skills: FunctionComponent<SkillsProps> = () => {
               <p className="text-sm text-gray-400">Cloud Platforms</p>
               <p>
                 <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
-                Firebase + Firestore
+                Azure + Azure DevOps
               </p>
               <p>
                 <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
-                Azure + Azure DevOps
+                Firebase
               </p>
               <p className="text-sm text-gray-400">Others</p>
               <p>

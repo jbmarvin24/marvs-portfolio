@@ -6,8 +6,10 @@ interface PortfolioProps {}
 
 const Portfolio: FunctionComponent<PortfolioProps> = () => {
   return (
-    <section className="py-10 px-10 max-w-5xl mx-auto">
-      <h1 className="text-4xl font-semibold text-center mb-1">Portfolio</h1>
+    <section className="py-20 px-10 max-w-3xl mx-auto">
+      <h1 className="text-4xl font-semibold text-center mb-1 text-white">
+        Portfolio
+      </h1>
       <p className="text-sm text-center">Most recent work</p>
 
       <div className="mt-16">

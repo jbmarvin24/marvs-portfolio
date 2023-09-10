@@ -7,10 +7,10 @@ interface PortfolioCardProps {
 
 const PortfolioCard: FunctionComponent<PortfolioCardProps> = ({ name }) => {
   return (
-    <div className="grid md:grid-cols-2 grid-cols-1 content-center items-center justify-items-center gap-12">
+    <div className="grid md:grid-cols-2 grid-cols-1 content-center items-center justify-items-center gap-10">
       <div className=" bg-orange-400 h-44 w-5/6 rounded-md"></div>
       <div className="">
-        <h3 className="text-2xl font-semibold">{name}</h3>
+        <h3 className="text-2xl font-semibold text-white">{name}</h3>
         <p className="text-sm mt-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
           vero voluptatum facere ipsam sit magnam eum dicta cumque laudantium
