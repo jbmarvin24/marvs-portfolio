@@ -32,9 +32,7 @@ const Collapsible: FunctionComponent<CollapsibleProps> = ({
         height: isOpen ? height : 0,
       }}
     >
-      <div ref={ref} className="pb-5 pt-8 flex flex-col max-w-xs mx-auto gap-6">
-        {children}
-      </div>
+      <div ref={ref}>{children}</div>
     </div>
   );
 };
