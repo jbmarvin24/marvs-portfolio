@@ -7,13 +7,13 @@ interface ContactMeProps {}
 
 const ContactMe: FunctionComponent<ContactMeProps> = () => {
   return (
-    <section className="p-10 max-w-5xl mx-auto">
+    <section className="px-10 py-20 max-w-5xl mx-auto">
       <h1 className="text-4xl font-semibold text-center mb-1 text-slate-200">
         Contact Me
       </h1>
       <p className="text-sm text-center">Get in touch</p>
-      <div className="grid grid-cols-2 mt-16 justify-items-stretch gap-8 items-start">
-        <div className="justify-self-center grid grid-cols-1 gap-10">
+      <div className="grid md:grid-cols-2 grid-cols-1 mt-16 md:justify-items-stretch gap-8 items-start">
+        <div className="md:justify-self-center grid grid-cols-1 gap-10">
           <div className="flex items-center">
             <LuMail className="h-7 w-7 text-primary" />
             <div className="ml-5">
@@ -33,7 +33,7 @@ const ContactMe: FunctionComponent<ContactMeProps> = () => {
             </div>
           </div>
         </div>
-        <div className="justify-self-stretch -translate-x-24">
+        <div className="md:justify-self-stretch md:-translate-x-24 mt-10 md:mt-0">
           <form action="" className="grid grid-cols-1 gap-8">
             <div className="form-control w-full bg-[#242D40] rounded-lg">
               <label className="label">
