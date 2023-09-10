@@ -36,13 +36,15 @@ const Skills: FunctionComponent<SkillsProps> = () => {
             </button>
           </div>
           <Collapsible isOpen={hardSkillOpen}>
-            <TechStackProgress name="Typescript" value={80} />
-            <TechStackProgress name="C#" value={80} />
-            <TechStackProgress name="ASP.NET MVC + API" value={70} />
-            <TechStackProgress name="React JS" value={85} />
-            <TechStackProgress name="Nest JS" value={80} />
-            <TechStackProgress name="SQL" value={90} />
-            <TechStackProgress name="HTML+CSS" value={80} />
+            <div className="pb-5 pt-8 flex flex-col max-w-xs mx-auto gap-6">
+              <TechStackProgress name="Typescript" value={80} />
+              <TechStackProgress name="C#" value={80} />
+              <TechStackProgress name="ASP.NET MVC + API" value={70} />
+              <TechStackProgress name="React JS" value={85} />
+              <TechStackProgress name="Nest JS" value={80} />
+              <TechStackProgress name="SQL" value={90} />
+              <TechStackProgress name="HTML+CSS" value={80} />
+            </div>
           </Collapsible>
         </div>
 
@@ -66,7 +68,7 @@ const Skills: FunctionComponent<SkillsProps> = () => {
             </button>
           </div>
           <Collapsible isOpen={AdditionalSkillsOpen}>
-            <div className="flex flex-col max-w-xs gap-6">
+            <div className="pb-5 pt-8 flex flex-col max-w-xs mx-auto gap-6">
               <p className="text-sm text-gray-400">Libraries & Tools</p>
               <p>
                 <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
