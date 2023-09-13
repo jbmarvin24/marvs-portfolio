@@ -39,19 +39,19 @@ const NavBar: FunctionComponent<NavBarProps> = () => {
 
           <ul className="md:flex gap-10 hidden text-sm">
             <li>
-              <a href="">Home</a>
+              <a href="#">Home</a>
             </li>
             <li>
-              <a href="">About</a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href="">Skills</a>
+              <a href="#skills">Skills</a>
             </li>
             <li>
-              <a href="">Portfolio</a>
+              <a href="#portfolio">Portfolio</a>
             </li>
             <li>
-              <a href="">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
             <li>
               <a href="">
@@ -64,19 +64,19 @@ const NavBar: FunctionComponent<NavBarProps> = () => {
         <Collapsible isOpen={toggleMobileNav}>
           <ul className="grid grid-cols-1 gap-5 text-base">
             <li>
-              <a href="">Home</a>
+              <a href="#">Home</a>
             </li>
             <li>
-              <a href="">About</a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href="">Skills</a>
+              <a href="#skills">Skills</a>
             </li>
             <li>
-              <a href="">Portfolio</a>
+              <a href="#portfolio">Portfolio</a>
             </li>
             <li>
-              <a href="">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </Collapsible>

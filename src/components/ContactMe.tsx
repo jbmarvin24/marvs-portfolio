@@ -7,7 +7,7 @@ interface ContactMeProps {}
 
 const ContactMe: FunctionComponent<ContactMeProps> = () => {
   return (
-    <section className="px-10 md:py-20 py-14 max-w-5xl mx-auto">
+    <section id="contact" className="px-10 md:py-20 py-14 max-w-5xl mx-auto">
       <h1 className="text-4xl font-semibold text-center mb-1 text-slate-200">
         Contact Me
       </h1>
@@ -18,7 +18,16 @@ const ContactMe: FunctionComponent<ContactMeProps> = () => {
             <LuMail className="h-7 w-7 text-primary" />
             <div className="ml-5">
               <h3 className="text-xl font-semibold text-slate-200">Email me</h3>
-              <p className="text-sm mt-1 text-gray-400">jbmarvin24@gmail.com</p>
+              <div className="tooltip tooltip-bottom" data-tip="click to copy">
+                <p
+                  className="text-sm mt-1 text-gray-400 cursor-pointer"
+                  onClick={() =>
+                    navigator.clipboard.writeText('jbmarvin24@gmail.com')
+                  }
+                >
+                  jbmarvin24@gmail.com
+                </p>
+              </div>
             </div>
           </div>
           <div className="flex items-center">
@@ -27,9 +36,18 @@ const ContactMe: FunctionComponent<ContactMeProps> = () => {
               <h3 className="text-xl font-semibold text-slate-200">
                 Connect with me
               </h3>
-              <p className="text-sm mt-1 text-gray-400">
-                linkedin.com/in/jbmarvin
-              </p>
+              <div
+                className="tooltip tooltip-bottom"
+                data-tip="go to my linkedin"
+              >
+                <a
+                  href="https://linkedin.com/in/jbmarvin"
+                  target="_blank"
+                  className="text-sm mt-1 text-gray-400"
+                >
+                  linkedin.com/in/jbmarvin
+                </a>
+              </div>
             </div>
           </div>
         </div>

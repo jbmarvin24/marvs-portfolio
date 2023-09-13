@@ -13,7 +13,10 @@ const Skills: FunctionComponent<SkillsProps> = () => {
   const [AdditionalSkillsOpen, setAdditionalSkillsOpen] = useState(false);
 
   return (
-    <section className="md:pt-20 p-10 pt-14 md:px-32 px-10 max-w-5xl mx-auto">
+    <section
+      id="skills"
+      className="md:pt-20 p-10 pt-14 md:px-32 px-10 max-w-5xl mx-auto"
+    >
       <h1 className="text-4xl font-semibold text-center mb-1 text-white">
         Skills
       </h1>

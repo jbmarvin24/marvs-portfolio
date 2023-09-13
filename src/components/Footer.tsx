@@ -13,16 +13,22 @@ const Footer: FunctionComponent<FooterProps> = () => {
         </div>
         <div className="md:justify-self-end">
           <ul className="grid md:grid-cols-3 grid-cols-1 gap-10 text-md">
-            <li>Services</li>
-            <li>Portfolio</li>
-            <li>Contact&nbsp;Me</li>
+            <li>
+              <a href="#skills">Skills</a>
+            </li>
+            <li>
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a href="#contact">Contact&nbsp;Me</a>
+            </li>
           </ul>
         </div>
       </div>
       <div className="text-right">
         <a
           href="#"
-          className="btn btn-primary md:px-1 px-2 md:opacity-70 opacity-80 min-h-0 md:h-8 rounded-md translate-x-7"
+          className="btn btn-primary md:px-1 px-2 md:opacity-70 opacity-80 min-h-0 md:h-8 rounded-md"
         >
           <BiUpArrowAlt className="md:w-5 md:h-5 w-8 h-8" />
         </a>

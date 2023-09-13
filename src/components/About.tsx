@@ -5,7 +5,10 @@ interface AboutProps {}
 
 const About: FunctionComponent<AboutProps> = () => {
   return (
-    <section className="md:py-20 py-14 md:px-32 px-10 max-w-5xl mx-auto">
+    <section
+      id="about"
+      className="md:py-20 py-14 md:px-32 px-10 max-w-5xl mx-auto"
+    >
       <h1 className="text-4xl font-semibold text-center mb-1 text-white">
         About me
       </h1>

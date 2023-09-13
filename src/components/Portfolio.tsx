@@ -16,7 +16,7 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
   };
 
   return (
-    <section className="py-20 px-10 max-w-4xl mx-auto">
+    <section id="portfolio" className="py-20 px-10 max-w-4xl mx-auto">
       <h1 className="text-4xl font-semibold text-center mb-1 text-white">
         Portfolio
       </h1>
