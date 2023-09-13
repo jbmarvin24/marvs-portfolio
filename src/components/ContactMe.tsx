@@ -2,6 +2,7 @@ import { FunctionComponent } from 'react';
 import { LuMail } from 'react-icons/lu';
 import { BiSend } from 'react-icons/bi';
 import { FaLinkedin } from 'react-icons/fa';
+import { AiFillGithub } from 'react-icons/ai';
 
 interface ContactMeProps {}
 
@@ -42,6 +43,21 @@ const ContactMe: FunctionComponent<ContactMeProps> = () => {
                 className="text-sm mt-1 text-gray-400 hover:underline hover:text-white"
               >
                 linkedin.com/in/jbmarvin
+              </a>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <AiFillGithub className="h-7 w-7 text-primary" />
+            <div className="ml-5">
+              <h3 className="text-xl font-semibold text-slate-200">
+                Follow me
+              </h3>
+              <a
+                href="https://github.com/jbmarvin24"
+                target="_blank"
+                className="text-sm mt-1 text-gray-400 hover:underline hover:text-white"
+              >
+                github.com/jbmarvin24
               </a>
             </div>
           </div>
