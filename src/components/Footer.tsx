@@ -34,7 +34,14 @@ const Footer: FunctionComponent<FooterProps> = () => {
         </a>
       </div>
       <p className="text-center text-xs text-gray-400 md:mt-16 mt-14">
-        &copy; John Marvin Doniña. All rights reserved
+        &copy; John Marvin Doniña. All rights reserved |{' '}
+        <a
+          href="https://www.behance.net/213c339b"
+          className="text-xs text-gray-400 mt-5"
+          target="_blank"
+        >
+          Designed by Мария Ларичева
+        </a>
       </p>
     </footer>
   );
