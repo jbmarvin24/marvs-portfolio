@@ -11,7 +11,7 @@ const PortfolioCard: FunctionComponent<PortfolioCardProps> = ({ name }) => {
       <div className=" bg-orange-400 h-44 w-5/6 rounded-md"></div>
       <div className="">
         <h3 className="text-2xl font-semibold text-white">{name}</h3>
-        <p className="text-sm mt-2">
+        <p className="text-sm mt-2 pr-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
           vero voluptatum facere ipsam sit magnam eum dicta cumque laudantium
           sed!

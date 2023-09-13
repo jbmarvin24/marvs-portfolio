@@ -1,40 +1,93 @@
-import { FunctionComponent } from 'react';
+import { CSSProperties, FunctionComponent } from 'react';
 import PortfolioCard from './common/PortfolioCard';
 import { FaArrowRight } from 'react-icons/fa';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { IoIosArrowForward } from 'react-icons/io';
 
 interface PortfolioProps {}
 
 const Portfolio: FunctionComponent<PortfolioProps> = () => {
+  const arrowStyles: CSSProperties = {
+    position: 'absolute',
+    zIndex: 2,
+    top: 'calc(50% - 3rem)',
+    cursor: 'pointer',
+  };
+
   return (
-    <section className="py-20 px-10 max-w-3xl mx-auto">
+    <section className="py-20 px-10 max-w-4xl mx-auto">
       <h1 className="text-4xl font-semibold text-center mb-1 text-white">
         Portfolio
       </h1>
       <p className="text-sm text-center">Most recent work</p>
 
-      <div className="mt-16">
-        <div className="carousel w-full">
-          <div id="item1" className="carousel-item w-full">
+      <div className="md:mt-16 mt-8">
+        <Carousel
+          // className="max-w-4xl"
+          renderArrowPrev={(onClickHandler, _, label) => (
+            <button
+              type="button"
+              onClick={onClickHandler}
+              title={label}
+              style={{ ...arrowStyles, left: 0 }}
+            >
+              <IoIosArrowForward className="md:w-14 md:h-14 h-10 w-10 rotate-180 text-primary" />
+            </button>
+          )}
+          renderArrowNext={(onClickHandler, _, label) => (
+            <button
+              type="button"
+              onClick={onClickHandler}
+              title={label}
+              style={{ ...arrowStyles, right: 0 }}
+            >
+              <IoIosArrowForward className="md:w-14 md:h-14 h-10 w-10 text-primary" />
+            </button>
+          )}
+          statusFormatter={() => ''}
+          renderIndicator={(onClickHandler, isSelected, index, label) => {
+            if (isSelected) {
+              return (
+                <li
+                  className="w-2 h-2 inline-block my-0 mx-2 bg-primary rounded-full"
+                  aria-label={`Selected: ${label} ${index + 1}`}
+                  title={`Selected: ${label} ${index + 1}`}
+                />
+              );
+            }
+            return (
+              <li
+                className="w-2 h-2 inline-block my-0 mx-2 bg-gray-700 rounded-full"
+                onClick={onClickHandler}
+                onKeyDown={onClickHandler}
+                value={index}
+                key={index}
+                role="button"
+                tabIndex={0}
+                title={`${label} ${index + 1}`}
+                aria-label={`${label} ${index + 1}`}
+              />
+            );
+          }}
+        >
+          <div key="slide1" className="px-20 py-10 md:h-80 h-[32rem] text-left">
             <PortfolioCard name="Project 1" />
           </div>
-          <div id="item2" className="carousel-item w-full">
+          <div
+            key="slide2"
+            className=" px-20 py-10 md:h-80 h-[32rem] text-left"
+          >
             <PortfolioCard name="Project 2" />
           </div>
-          <div id="item3" className="carousel-item w-full">
+          <div
+            key="slide2"
+            className=" px-20 py-10 md:h-80 h-[32rem] text-left"
+          >
             <PortfolioCard name="Project 3" />
           </div>
-        </div>
-        <div className="flex justify-center w-full py-10 gap-2">
-          <a href="#item1" className="btn btn-xs">
-            1
-          </a>
-          <a href="#item2" className="btn btn-xs">
-            2
-          </a>
-          <a href="#item3" className="btn btn-xs">
-            3
-          </a>
-        </div>
+        </Carousel>
+
         <a
           href="/#"
           className="mt-5 text-sm text-center hover:underline cursor-pointer block"
