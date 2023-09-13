@@ -15,7 +15,11 @@ const About: FunctionComponent<AboutProps> = () => {
       <p className="text-sm text-center">My introduction</p>
       <div className="grid md:grid-cols-2 grid-cols-1 md:gap-14 gap-8 mt-10">
         <div className="mx-auto my-auto">
-          <div className="w-80 h-80 bg-red-400 rounded-md"></div>
+          <div className="avatar">
+            <div className="w-80 rounded-xl">
+              <img src="https://placehold.co/300" />
+            </div>
+          </div>
         </div>
         <div>
           <p className="text-base leading-relaxed md:text-left text-center">

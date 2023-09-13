@@ -21,7 +21,12 @@ const Hero: FunctionComponent<HeroProps> = () => {
                 <FiGithub className="w-6 h-6 text-primary" />
               </a>
             </div>
-            <div className="w-64 h-60 bg-red-400 rounded-md"></div>
+            {/* <div className="w-64 h-60 bg-red-400 rounded-md"></div> */}
+            <div className="avatar">
+              <div className="w-64 mask mask-hexagon-2">
+                <img src="https://placehold.co/300" />
+              </div>
+            </div>
           </div>
         </div>
         <div className="text-left">
