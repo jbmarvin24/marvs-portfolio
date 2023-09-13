@@ -36,18 +36,13 @@ const ContactMe: FunctionComponent<ContactMeProps> = () => {
               <h3 className="text-xl font-semibold text-slate-200">
                 Connect with me
               </h3>
-              <div
-                className="tooltip tooltip-bottom"
-                data-tip="go to my linkedin"
+              <a
+                href="https://linkedin.com/in/jbmarvin"
+                target="_blank"
+                className="text-sm mt-1 text-gray-400 hover:underline hover:text-white"
               >
-                <a
-                  href="https://linkedin.com/in/jbmarvin"
-                  target="_blank"
-                  className="text-sm mt-1 text-gray-400"
-                >
-                  linkedin.com/in/jbmarvin
-                </a>
-              </div>
+                linkedin.com/in/jbmarvin
+              </a>
             </div>
           </div>
         </div>
