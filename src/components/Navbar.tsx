@@ -1,25 +1,31 @@
 import { FunctionComponent, useEffect, useState } from 'react';
 import Collapsible from './common/Collapsible';
-import useStore from '../store';
+import useThemeStore from '../themeStore';
 
 interface NavBarProps {}
 
 const NavBar: FunctionComponent<NavBarProps> = () => {
   const [mobileNav, setMobileNav] = useState(false);
-  const theme = useStore((s) => s.theme);
-  const toggleTheme = useStore((s) => s.toggleTheme);
+  const theme = useThemeStore((s) => s.theme);
+  const fontColor = useThemeStore((s) => s.fontColor);
+  const toggleTheme = useThemeStore((s) => s.toggleTheme);
 
   const toggleMobileNav = () => {
     setMobileNav(!mobileNav);
   };
 
   useEffect(() => {
-    document?.querySelector('html')?.setAttribute('data-theme', theme);
+    document
+      ?.querySelector('html')
+      ?.setAttribute(
+        'data-theme',
+        theme === 'dark' ? 'myDarkTheme' : 'myLightTheme'
+      );
   }, [theme]);
 
   return (
     <header>
-      <nav className="p-8 px-10 max-w-4xl mx-auto text-white">
+      <nav className={`p-8 px-10 max-w-4xl mx-auto ${fontColor}`}>
         <div className="flex justify-between mb-10">
           <a href="#" className="grow md:text-base text-lg">
             Marvin
