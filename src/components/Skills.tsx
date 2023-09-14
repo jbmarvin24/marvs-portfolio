@@ -84,6 +84,10 @@ const Skills: FunctionComponent<SkillsProps> = () => {
                 <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
                 Docker + DockerHub
               </p>
+              <p>
+                <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
+                Postman
+              </p>
               <p className="text-sm text-gray-400">Databases</p>
               <p>
                 <BsCheckLg className="text-primary inline-block w-6 h-6" /> SQL
