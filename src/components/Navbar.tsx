@@ -1,18 +1,16 @@
 import { FunctionComponent, useEffect, useState } from 'react';
 import Collapsible from './common/Collapsible';
+import useStore from '../store';
 
 interface NavBarProps {}
 
 const NavBar: FunctionComponent<NavBarProps> = () => {
   const [mobileNav, setMobileNav] = useState(false);
-  const [theme, setTheme] = useState('myDarkTheme');
+  const theme = useStore((s) => s.theme);
+  const toggleTheme = useStore((s) => s.toggleTheme);
 
   const toggleMobileNav = () => {
     setMobileNav(!mobileNav);
-  };
-
-  const toggleTheme = () => {
-    setTheme(theme === 'myDarkTheme' ? 'myLightTheme' : 'myDarkTheme');
   };
 
   useEffect(() => {
