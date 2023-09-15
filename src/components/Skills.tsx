@@ -5,6 +5,7 @@ import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { PiBooksDuotone } from 'react-icons/pi';
 import { BsCheckLg } from 'react-icons/bs';
 import Collapsible from './common/Collapsible';
+import Title from './common/Title';
 
 interface SkillsProps {}
 
@@ -17,9 +18,7 @@ const Skills: FunctionComponent<SkillsProps> = () => {
       id="skills"
       className="md:pt-20 p-10 pt-14 md:px-32 px-10 max-w-5xl mx-auto"
     >
-      <h1 className="text-4xl font-semibold text-center mb-1 text-white">
-        Skills
-      </h1>
+      <Title className="mb-1 text-center">Skills</Title>
       <p className="text-sm text-center">My technical level</p>
       <div className="mt-10 flex md:flex-row flex-col md:gap-28 gap-10">
         <div className="md:mx-0 mx-auto">

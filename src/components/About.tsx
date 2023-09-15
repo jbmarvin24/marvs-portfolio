@@ -1,6 +1,7 @@
 import { FunctionComponent } from 'react';
 import { FiDownload } from 'react-icons/fi';
 import Paragraph from './common/Paragraph';
+import Title from './common/Title';
 
 interface AboutProps {}
 
@@ -10,9 +11,7 @@ const About: FunctionComponent<AboutProps> = () => {
       id="about"
       className="md:py-20 py-14 md:px-32 px-10 max-w-5xl mx-auto"
     >
-      <h1 className="text-4xl font-semibold text-center mb-1 text-white">
-        About me
-      </h1>
+      <Title className="mb-1 text-center">About me</Title>
       <p className="text-sm text-center">My introduction</p>
       <div className="grid md:grid-cols-2 grid-cols-1 md:gap-14 gap-8 mt-10">
         <div className="mx-auto my-auto">
@@ -23,9 +22,6 @@ const About: FunctionComponent<AboutProps> = () => {
           </div>
         </div>
         <div>
-          {/* <p className="text-base leading-relaxed md:text-left text-center">
-            
-          </p> */}
           <Paragraph className="leading-relaxed md:text-left text-center px-7">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
             ipsam sint maiores mollitia odio repudiandae nihil at veritatis ab

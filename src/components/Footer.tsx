@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react';
 import { BiUpArrowAlt } from 'react-icons/bi';
+import Title from './common/Title';
 
 interface FooterProps {}
 
@@ -8,7 +9,7 @@ const Footer: FunctionComponent<FooterProps> = () => {
     <footer className="mx-auto p-10 bg-[#0E111B] text-white">
       <div className="grid md:grid-cols-2 grid-cols-1 md:px-40 max-w-5xl mx-auto md:justify-items-stretch gap-20">
         <div>
-          <h3 className="text-4xl font-semibold">Marvin</h3>
+          <Title>Marvin</Title>
           <p className="text-sm mt-4">Fullstack developer</p>
         </div>
         <div className="md:justify-self-end">

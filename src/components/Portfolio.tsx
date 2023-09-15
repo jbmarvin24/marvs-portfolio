@@ -4,6 +4,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { IoIosArrowForward } from 'react-icons/io';
+import Title from './common/Title';
 
 interface PortfolioProps {}
 
@@ -17,9 +18,7 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
 
   return (
     <section id="portfolio" className="py-20 px-10 max-w-4xl mx-auto">
-      <h1 className="text-4xl font-semibold text-center mb-1 text-white">
-        Portfolio
-      </h1>
+      <Title className="mb-1 text-center">Portfolio</Title>
       <p className="text-sm text-center">Most recent work</p>
 
       <div className="md:mt-16 mt-8">
