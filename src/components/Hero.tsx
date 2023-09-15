@@ -5,6 +5,7 @@ import { FiArrowDown } from 'react-icons/fi';
 import { FiGithub } from 'react-icons/fi';
 import { RiLinkedinLine } from 'react-icons/ri';
 import useThemeStore from '../themeStore';
+import Paragraph from './common/Paragraph';
 
 interface HeroProps {}
 
@@ -41,14 +42,10 @@ const Hero: FunctionComponent<HeroProps> = () => {
           >
             Fullstack developer
           </h3>
-          <p
-            className={`text-sm ${
-              theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
-            }`}
-          >
+          <Paragraph>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi,
             molestias.
-          </p>
+          </Paragraph>
           <a href="#contact" className="my-6 btn btn-primary capitalize">
             Contact Me
             <BiSend className="w-5 h-5" />

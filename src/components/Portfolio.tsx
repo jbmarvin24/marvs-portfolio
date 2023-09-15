@@ -72,19 +72,34 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
           }}
         >
           <div key="slide1" className="px-20 py-10 md:h-80 h-[32rem] text-left">
-            <PortfolioCard name="Project 1" />
+            <PortfolioCard
+              name="Project 1"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+          vero voluptatum facere ipsam sit magnam eum dicta cumque laudantium
+          sed!"
+            />
           </div>
           <div
             key="slide2"
             className=" px-20 py-10 md:h-80 h-[32rem] text-left"
           >
-            <PortfolioCard name="Project 2" />
+            <PortfolioCard
+              name="Project 2"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+          vero voluptatum facere ipsam sit magnam eum dicta cumque laudantium
+          sed!"
+            />
           </div>
           <div
             key="slide2"
             className=" px-20 py-10 md:h-80 h-[32rem] text-left"
           >
-            <PortfolioCard name="Project 3" />
+            <PortfolioCard
+              name="Project 3"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+          vero voluptatum facere ipsam sit magnam eum dicta cumque laudantium
+          sed!"
+            />
           </div>
         </Carousel>
 
