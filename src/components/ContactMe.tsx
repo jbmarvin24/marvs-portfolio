@@ -4,6 +4,7 @@ import { BiSend } from 'react-icons/bi';
 import { FaLinkedin } from 'react-icons/fa';
 import { AiFillGithub } from 'react-icons/ai';
 import Title from './common/Title';
+import SubTitle from './common/SubTitle';
 
 interface ContactMeProps {}
 
@@ -11,7 +12,7 @@ const ContactMe: FunctionComponent<ContactMeProps> = () => {
   return (
     <section id="contact" className="px-10 md:py-20 py-14 max-w-5xl mx-auto">
       <Title className="mb-1 text-center">Contact Me</Title>
-      <p className="text-sm text-center">Get in touch</p>
+      <SubTitle>Get in touch</SubTitle>
       <div className="grid md:grid-cols-2 grid-cols-1 mt-16 md:justify-items-stretch gap-8 items-start">
         <div className="md:justify-self-center grid grid-cols-1 gap-10">
           <div className="flex items-center">

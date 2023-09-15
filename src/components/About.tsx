@@ -2,6 +2,7 @@ import { FunctionComponent } from 'react';
 import { FiDownload } from 'react-icons/fi';
 import Paragraph from './common/Paragraph';
 import Title from './common/Title';
+import SubTitle from './common/SubTitle';
 
 interface AboutProps {}
 
@@ -12,7 +13,8 @@ const About: FunctionComponent<AboutProps> = () => {
       className="md:py-20 py-14 md:px-32 px-10 max-w-5xl mx-auto"
     >
       <Title className="mb-1 text-center">About me</Title>
-      <p className="text-sm text-center">My introduction</p>
+      {/* <p className="text-sm text-center">My introduction</p> */}
+      <SubTitle>My introduction</SubTitle>
       <div className="grid md:grid-cols-2 grid-cols-1 md:gap-14 gap-8 mt-10">
         <div className="mx-auto my-auto">
           <div className="avatar">
@@ -22,7 +24,7 @@ const About: FunctionComponent<AboutProps> = () => {
           </div>
         </div>
         <div>
-          <Paragraph className="leading-relaxed md:text-left text-center px-7">
+          <Paragraph className="leading-relaxed md:text-left text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
             ipsam sint maiores mollitia odio repudiandae nihil at veritatis ab
             rerum fuga, modi, ex vero. Molestias hic animi in libero voluptates.

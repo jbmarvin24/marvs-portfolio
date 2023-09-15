@@ -6,6 +6,8 @@ import { PiBooksDuotone } from 'react-icons/pi';
 import { BsCheckLg } from 'react-icons/bs';
 import Collapsible from './common/Collapsible';
 import Title from './common/Title';
+import SubTitle from './common/SubTitle';
+import Paragraph from './common/Paragraph';
 
 interface SkillsProps {}
 
@@ -19,16 +21,14 @@ const Skills: FunctionComponent<SkillsProps> = () => {
       className="md:pt-20 p-10 pt-14 md:px-32 px-10 max-w-5xl mx-auto"
     >
       <Title className="mb-1 text-center">Skills</Title>
-      <p className="text-sm text-center">My technical level</p>
+      <SubTitle>My technical level</SubTitle>
       <div className="mt-10 flex md:flex-row flex-col md:gap-28 gap-10">
         <div className="md:mx-0 mx-auto">
           <div className="flex flex-row gap-4">
             <BiCodeAlt className="text-primary w-10 h-10 my-auto" />
             <div>
               <h3 className="text-xl font-semibold text-white">Hard skills</h3>
-              <p className="text-sm text-gray-400">
-                Technologies I'm experienced with
-              </p>
+              <Paragraph>Technologies I'm experienced with</Paragraph>
             </div>
 
             <button onClick={() => sethardSkillOpen(!hardSkillOpen)}>
@@ -44,7 +44,8 @@ const Skills: FunctionComponent<SkillsProps> = () => {
               <TechStackProgress name="Typescript" value={85} />
               <TechStackProgress name="C#" value={85} />
               <TechStackProgress name="ASP.NET MVC + API" value={80} />
-              <TechStackProgress name="React JS + Nest JS" value={80} />
+              <TechStackProgress name="React JS" value={80} />
+              <TechStackProgress name="Nest JS" value={80} />
               <TechStackProgress name="SQL" value={90} />
               <TechStackProgress name="HTML + CSS" value={80} />
             </div>
@@ -58,9 +59,7 @@ const Skills: FunctionComponent<SkillsProps> = () => {
               <h3 className="text-xl font-semibold text-white">
                 Additional skills
               </h3>
-              <p className="text-sm text-gray-400">
-                What helps me to perform at my best
-              </p>
+              <Paragraph>What helps me to perform at my best</Paragraph>
             </div>
             <button
               onClick={() => setAdditionalSkillsOpen(!AdditionalSkillsOpen)}
