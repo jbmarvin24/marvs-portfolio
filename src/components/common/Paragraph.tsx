@@ -14,8 +14,8 @@ const Paragraph: FunctionComponent<ParagraphProps> = ({
 
   return (
     <p
-      className={`text-sm ${
-        theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+      className={`text-base ${
+        theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
       } ${className}`}
     >
       {children}
