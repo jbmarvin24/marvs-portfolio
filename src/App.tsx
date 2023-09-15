@@ -5,10 +5,13 @@ import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 import ContactMe from './components/ContactMe';
 import Footer from './components/Footer';
+import useThemeStore from './themeStore';
 
 function App() {
+  const theme = useThemeStore((s) => s.theme);
+
   return (
-    <>
+    <div className={`${theme === 'dark' ? 'text-gray-100' : 'text-gray-900'}`}>
       <NavBar />
       <Hero />
       <About />
@@ -16,7 +19,7 @@ function App() {
       <Portfolio />
       <ContactMe />
       <Footer />
-    </>
+    </div>
   );
 }
 

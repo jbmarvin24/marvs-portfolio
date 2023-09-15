@@ -7,7 +7,6 @@ interface NavBarProps {}
 const NavBar: FunctionComponent<NavBarProps> = () => {
   const [mobileNav, setMobileNav] = useState(false);
   const theme = useThemeStore((s) => s.theme);
-  const fontColor = useThemeStore((s) => s.fontColor);
   const toggleTheme = useThemeStore((s) => s.toggleTheme);
 
   const toggleMobileNav = () => {
@@ -25,7 +24,7 @@ const NavBar: FunctionComponent<NavBarProps> = () => {
 
   return (
     <header>
-      <nav className={`p-8 px-10 max-w-4xl mx-auto ${fontColor}`}>
+      <nav className="p-8 px-10 max-w-4xl mx-auto">
         <div className="flex justify-between mb-10">
           <a href="#" className="grow md:text-base text-lg">
             Marvin

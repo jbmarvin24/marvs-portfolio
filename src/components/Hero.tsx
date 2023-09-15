@@ -10,12 +10,9 @@ interface HeroProps {}
 
 const Hero: FunctionComponent<HeroProps> = () => {
   const theme = useThemeStore((s) => s.theme);
-  const fontColor = useThemeStore((s) => s.fontColor);
 
   return (
-    <section
-      className={`md:py-32 pt-20 pb-14 px-10 max-w-4xl mx-auto ${fontColor}`}
-    >
+    <section className="md:py-32 pt-20 pb-14 px-10 max-w-4xl mx-auto">
       <div className="grid md:grid-cols-2 grid-cols-1 gap-12">
         <div className="md:ml-auto">
           <div className="flex items-center md:gap-24 gap-16">
@@ -36,17 +33,19 @@ const Hero: FunctionComponent<HeroProps> = () => {
           </div>
         </div>
         <div className="text-left">
-          <h1 className={`text-5xl font-semibold my-3 ${fontColor} `}>
-            Hi, I'm Marvin
-          </h1>
+          <h1 className="text-5xl font-semibold my-3">Hi, I'm Marvin</h1>
           <h3
             className={`my-3 font-medium text-lg  ${
-              theme === 'dark' ? 'text-gray-200' : 'text-gray-800'
+              theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
             }`}
           >
             Fullstack developer
           </h3>
-          <p className="text-sm">
+          <p
+            className={`text-sm ${
+              theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+            }`}
+          >
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi,
             molestias.
           </p>
