@@ -24,7 +24,6 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
 
       <div className="md:mt-16 mt-8">
         <Carousel
-          // className="max-w-4xl"
           renderArrowPrev={(onClickHandler, _, label) => (
             <button
               type="button"

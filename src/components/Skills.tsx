@@ -27,7 +27,7 @@ const Skills: FunctionComponent<SkillsProps> = () => {
           <div className="flex flex-row gap-4">
             <BiCodeAlt className="text-primary w-10 h-10 my-auto" />
             <div>
-              <h3 className="text-xl font-semibold text-white">Hard skills</h3>
+              <h3 className="text-xl font-semibold">Hard skills</h3>
               <Paragraph>Technologies I'm experienced with</Paragraph>
             </div>
 
@@ -56,9 +56,7 @@ const Skills: FunctionComponent<SkillsProps> = () => {
           <div className="flex flex-row gap-4">
             <PiBooksDuotone className="text-primary w-10 h-10 my-auto" />
             <div>
-              <h3 className="text-xl font-semibold text-white">
-                Additional skills
-              </h3>
+              <h3 className="text-xl font-semibold">Additional skills</h3>
               <Paragraph>What helps me to perform at my best</Paragraph>
             </div>
             <button
@@ -72,7 +70,7 @@ const Skills: FunctionComponent<SkillsProps> = () => {
             </button>
           </div>
           <Collapsible isOpen={AdditionalSkillsOpen}>
-            <div className="pb-5 pt-8 flex flex-col max-w-xs mx-auto gap-6 ml-14 text-white">
+            <div className="pb-5 pt-8 flex flex-col max-w-xs mx-auto gap-6 ml-14">
               <p className="text-sm text-gray-400">Libraries & Tools</p>
               <p>
                 <BsCheckLg className="text-primary inline-block w-6 h-6" /> Git
