@@ -22,7 +22,7 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
       <Title className="mb-1 text-center">Portfolio</Title>
       <SubTitle>Most recent work</SubTitle>
 
-      <div className="md:mt-16 mt-8">
+      <div className="md:mt-16 mt-6">
         <Carousel
           renderArrowPrev={(onClickHandler, _, label) => (
             <button

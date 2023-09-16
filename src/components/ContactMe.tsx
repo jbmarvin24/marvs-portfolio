@@ -128,7 +128,7 @@ const ContactMe: FunctionComponent<ContactMeProps> = () => {
             </div>
             <button
               type="submit"
-              className="btn btn-primary mt-4 justify-self-start capitalize"
+              className="btn btn-primary mt-4 justify-self-start capitalize text-white"
             >
               Send Message <BiSend className="w-5 h-5" />
             </button>

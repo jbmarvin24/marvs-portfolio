@@ -30,7 +30,7 @@ const About: FunctionComponent<AboutProps> = () => {
             rerum fuga, modi, ex vero. Molestias hic animi in libero voluptates.
           </Paragraph>
           <div className="text-center">
-            <button className="btn btn-primary mt-20 text-white">
+            <button className="btn btn-primary md:mt-20 mt-14 text-white">
               Download CV <FiDownload className="w-5 h-5" />
             </button>
           </div>

@@ -20,8 +20,8 @@ const PortfolioCard: FunctionComponent<PortfolioCardProps> = ({
       </div>
       <div className="">
         <h3 className="text-2xl font-semibold">{name}</h3>
-        <Paragraph className="mt-2 pr-5">{description}</Paragraph>
-        <button className="btn btn-primary mt-3">
+        <Paragraph className="mt-2 md:pr-5">{description}</Paragraph>
+        <button className="btn btn-primary mt-3 text-white">
           Demo <FaArrowRight />
         </button>
       </div>

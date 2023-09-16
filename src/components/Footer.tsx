@@ -11,9 +11,11 @@ const Footer: FunctionComponent<FooterProps> = () => {
 
   return (
     <footer
-      className={classNames('mx-auto p-10 text-gray-100', {
+      className={classNames('mx-auto p-10 ', {
         'bg-[#0E111B]': theme === 'dark',
         'bg-primary': theme === 'light',
+        'text-gray-100': theme == 'dark',
+        'text-gray-50': theme == 'light',
       })}
     >
       <div className="grid md:grid-cols-2 grid-cols-1 md:px-40 max-w-5xl mx-auto md:justify-items-stretch gap-20">
