@@ -1,5 +1,6 @@
 import { FunctionComponent, ReactNode } from 'react';
 import useThemeStore from '../../themeStore';
+import classNames from 'classnames';
 
 interface ParagraphProps {
   className?: string;
@@ -14,9 +15,10 @@ const Paragraph: FunctionComponent<ParagraphProps> = ({
 
   return (
     <p
-      className={`text-base ${
-        theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-      } ${className}`}
+      className={classNames('text-base', className, {
+        'text-gray-400': theme === 'dark',
+        'text-gray-600': theme === 'light',
+      })}
     >
       {children}
     </p>

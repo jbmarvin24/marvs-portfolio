@@ -5,10 +5,14 @@ import { FaLinkedin } from 'react-icons/fa';
 import { AiFillGithub } from 'react-icons/ai';
 import Title from './common/Title';
 import SubTitle from './common/SubTitle';
+import classNames from 'classnames';
+import useThemeStore from '../themeStore';
 
 interface ContactMeProps {}
 
 const ContactMe: FunctionComponent<ContactMeProps> = () => {
+  const theme = useThemeStore((s) => s.theme);
+
   return (
     <section id="contact" className="px-10 md:py-20 py-14 max-w-5xl mx-auto">
       <Title className="mb-1 text-center">Contact Me</Title>
@@ -18,10 +22,13 @@ const ContactMe: FunctionComponent<ContactMeProps> = () => {
           <div className="flex items-center">
             <LuMail className="h-7 w-7 text-primary" />
             <div className="ml-5">
-              <h3 className="text-xl font-semibold text-slate-200">Email me</h3>
+              <h3 className="text-xl font-semibold">Email me</h3>
               <div className="tooltip tooltip-bottom" data-tip="click to copy">
                 <p
-                  className="text-sm mt-1 text-gray-400 cursor-pointer"
+                  className={classNames('text-sm mt-1 cursor-pointer', {
+                    'text-gray-400': theme === 'dark',
+                    'text-gray-600': theme === 'light',
+                  })}
                   onClick={() =>
                     navigator.clipboard.writeText('jbmarvin24@gmail.com')
                   }
@@ -34,31 +41,43 @@ const ContactMe: FunctionComponent<ContactMeProps> = () => {
           <div className="flex items-center">
             <FaLinkedin className="h-7 w-7 text-primary" />
             <div className="ml-5">
-              <h3 className="text-xl font-semibold text-slate-200">
-                Connect with me
-              </h3>
-              <a
-                href="https://linkedin.com/in/jbmarvin"
-                target="_blank"
-                className="text-sm mt-1 text-gray-400 hover:underline hover:text-white"
+              <h3 className="text-xl font-semibold ">Connect with me</h3>
+              <div
+                className="tooltip tooltip-bottom"
+                data-tip="open in new tab"
               >
-                linkedin.com/in/jbmarvin
-              </a>
+                <a
+                  href="https://linkedin.com/in/jbmarvin"
+                  target="_blank"
+                  className={classNames('text-sm mt-1 hover:underline', {
+                    'text-gray-400': theme === 'dark',
+                    'text-gray-600': theme === 'light',
+                  })}
+                >
+                  linkedin.com/in/jbmarvin
+                </a>
+              </div>
             </div>
           </div>
           <div className="flex items-center">
             <AiFillGithub className="h-7 w-7 text-primary" />
             <div className="ml-5">
-              <h3 className="text-xl font-semibold text-slate-200">
-                Follow me
-              </h3>
-              <a
-                href="https://github.com/jbmarvin24"
-                target="_blank"
-                className="text-sm mt-1 text-gray-400 hover:underline hover:text-white"
+              <h3 className="text-xl font-semibold ">Follow me</h3>
+              <div
+                className="tooltip tooltip-bottom"
+                data-tip="open in new tab"
               >
-                github.com/jbmarvin24
-              </a>
+                <a
+                  href="https://github.com/jbmarvin24"
+                  target="_blank"
+                  className={classNames('text-sm mt-1 hover:underline', {
+                    'text-gray-400': theme === 'dark',
+                    'text-gray-600': theme === 'light',
+                  })}
+                >
+                  github.com/jbmarvin24
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -66,33 +85,33 @@ const ContactMe: FunctionComponent<ContactMeProps> = () => {
           <form action="" className="grid grid-cols-1 gap-8">
             <div className="form-control w-full bg-[#242D40] rounded-lg">
               <label className="label">
-                <span className="label-text ml-3 mt-1 -mb-1 text-xs text-slate-200">
+                <span className="label-text ml-3 mt-1 -mb-1 text-xs ">
                   Name
                 </span>
               </label>
               <input
                 type="text"
-                className="input w-full focus:outline-0 bg-[#242D40] text-slate-200"
+                className="input w-full focus:outline-0 bg-[#242D40] "
               />
             </div>
             <div className="form-control w-full bg-[#242D40] rounded-lg">
               <label className="label">
-                <span className="label-text ml-3 mt-1 -mb-1 text-xs text-slate-200">
+                <span className="label-text ml-3 mt-1 -mb-1 text-xs ">
                   Email
                 </span>
               </label>
               <input
                 type="text"
-                className="input w-full focus:outline-0 bg-[#242D40] text-slate-200"
+                className="input w-full focus:outline-0 bg-[#242D40] "
               />
             </div>
             <div className="form-control w-full bg-[#242D40] rounded-lg">
               <label className="label">
-                <span className="label-text ml-3 mt-1 -mb-1 text-xs text-slate-200">
+                <span className="label-text ml-3 mt-1 -mb-1 text-xs ">
                   Message
                 </span>
               </label>
-              <textarea className="textarea h-40 w-full focus:outline-0 bg-[#242D40] text-slate-200"></textarea>
+              <textarea className="textarea h-40 w-full focus:outline-0 bg-[#242D40] "></textarea>
             </div>
             <button
               type="submit"

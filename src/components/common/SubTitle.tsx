@@ -1,5 +1,6 @@
 import { FunctionComponent, ReactNode } from 'react';
 import useThemeStore from '../../themeStore';
+import classNames from 'classnames';
 
 interface SubTitleProps {
   className?: string;
@@ -14,9 +15,10 @@ const SubTitle: FunctionComponent<SubTitleProps> = ({
 
   return (
     <p
-      className={`text-sm text-center 
-  ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}
-  ${className}`}
+      className={classNames('text-sm text-center', className, {
+        'text-gray-400': theme === 'dark',
+        'text-gray-600': theme === 'light',
+      })}
     >
       {children}
     </p>
