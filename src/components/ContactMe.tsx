@@ -83,35 +83,48 @@ const ContactMe: FunctionComponent<ContactMeProps> = () => {
         </div>
         <div className="md:justify-self-stretch md:-translate-x-24 mt-10 md:mt-0">
           <form action="" className="grid grid-cols-1 gap-8">
-            <div className="form-control w-full bg-[#242D40] rounded-lg">
+            <div
+              className={classNames('form-control w-full rounded-lg', {
+                'bg-[#242D40]': theme === 'dark',
+                'bg-[#EEF1FC]': theme === 'light',
+              })}
+            >
               <label className="label">
-                <span className="label-text ml-3 mt-1 -mb-1 text-xs ">
-                  Name
-                </span>
+                <span className="label-text ml-3 mt-1 -mb-1 text-xs">Name</span>
               </label>
               <input
                 type="text"
-                className="input w-full focus:outline-0 bg-[#242D40] "
+                className="input w-full focus:outline-0 bg-transparent"
               />
             </div>
-            <div className="form-control w-full bg-[#242D40] rounded-lg">
+            <div
+              className={classNames('form-control w-full rounded-lg', {
+                'bg-[#242D40]': theme === 'dark',
+                'bg-[#EEF1FC]': theme === 'light',
+              })}
+            >
               <label className="label">
-                <span className="label-text ml-3 mt-1 -mb-1 text-xs ">
+                <span className="label-text ml-3 mt-1 -mb-1 text-xs">
                   Email
                 </span>
               </label>
               <input
                 type="text"
-                className="input w-full focus:outline-0 bg-[#242D40] "
+                className="input w-full focus:outline-0 bg-transparent"
               />
             </div>
-            <div className="form-control w-full bg-[#242D40] rounded-lg">
+            <div
+              className={classNames('form-control w-full rounded-lg', {
+                'bg-[#242D40]': theme === 'dark',
+                'bg-[#EEF1FC]': theme === 'light',
+              })}
+            >
               <label className="label">
-                <span className="label-text ml-3 mt-1 -mb-1 text-xs ">
+                <span className="label-text ml-3 mt-1 -mb-1 text-xs">
                   Message
                 </span>
               </label>
-              <textarea className="textarea h-40 w-full focus:outline-0 bg-[#242D40] "></textarea>
+              <textarea className="textarea h-40 w-full focus:outline-0 bg-transparent"></textarea>
             </div>
             <button
               type="submit"
