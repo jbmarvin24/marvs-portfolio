@@ -6,10 +6,14 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { IoIosArrowForward } from 'react-icons/io';
 import Title from './common/Title';
 import SubTitle from './common/SubTitle';
+import classNames from 'classnames';
+import useThemeStore from '../themeStore';
 
 interface PortfolioProps {}
 
 const Portfolio: FunctionComponent<PortfolioProps> = () => {
+  const theme = useThemeStore((s) => s.theme);
+
   const arrowStyles: CSSProperties = {
     position: 'absolute',
     zIndex: 2,
@@ -57,7 +61,13 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
             }
             return (
               <li
-                className="w-2 h-2 inline-block my-0 mx-2 bg-gray-700 rounded-full"
+                className={classNames(
+                  'w-2 h-2 inline-block my-0 mx-2 rounded-full',
+                  {
+                    'bg-gray-700': theme === 'dark',
+                    'bg-gray-300': theme === 'light',
+                  }
+                )}
                 onClick={onClickHandler}
                 onKeyDown={onClickHandler}
                 value={index}
