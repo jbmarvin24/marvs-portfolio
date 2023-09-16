@@ -6,6 +6,7 @@ import { FiGithub } from 'react-icons/fi';
 import { RiLinkedinLine } from 'react-icons/ri';
 import useThemeStore from '../themeStore';
 import Paragraph from './common/Paragraph';
+import { contacts } from '../data/contacts';
 
 interface HeroProps {}
 
@@ -18,14 +19,17 @@ const Hero: FunctionComponent<HeroProps> = () => {
         <div className="md:ml-auto">
           <div className="flex items-center md:gap-24 gap-16">
             <div className="flex flex-col gap-6">
-              <a href="https://linkedin.com/in/jbmarvin" target="_blank">
-                <RiLinkedinLine className="w-6 h-6 text-primary" />
-              </a>
-              <a href="https://github.com/jbmarvin24" target="_blank">
-                <FiGithub className="w-6 h-6 text-primary" />
-              </a>
+              <div className="tooltip tooltip-top" data-tip="LinkedIn">
+                <a href={contacts.linkedIn.link} target="_blank">
+                  <RiLinkedinLine className="w-6 h-6 text-primary" />
+                </a>
+              </div>
+              <div className="tooltip tooltip-top" data-tip="GitHub">
+                <a href={contacts.gitHub.link} target="_blank">
+                  <FiGithub className="w-6 h-6 text-primary" />
+                </a>
+              </div>
             </div>
-            {/* <div className="w-64 h-60 bg-red-400 rounded-md"></div> */}
             <div className="avatar">
               <div className="w-64 mask mask-hexagon-2">
                 <img src="https://placehold.co/300" />
