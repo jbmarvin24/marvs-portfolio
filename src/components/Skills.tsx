@@ -39,7 +39,7 @@ const Skills: FunctionComponent<SkillsProps> = () => {
               </button>
             </div>
             <Collapsible isOpen={hardSkillOpen}>
-              <div className="pb-5 pt-8 ml-14 flex flex-col max-w-xs mx-auto gap-6">
+              <div className="pb-5 pt-8 ml-14 flex flex-col max-w-xs mx-auto gap-6 md:mr-0 mr-10">
                 <TechStackProgress name="Typescript" value={85} />
                 <TechStackProgress name="C#" value={85} />
                 <TechStackProgress name="ASP.NET MVC + API" value={80} />
