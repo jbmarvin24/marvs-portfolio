@@ -6,18 +6,26 @@ import Portfolio from './components/Portfolio';
 import ContactMe from './components/ContactMe';
 import Footer from './components/Footer';
 import useThemeStore from './themeStore';
+import classNames from 'classnames';
 
 function App() {
   const theme = useThemeStore((s) => s.theme);
 
   return (
-    <div className={`${theme === 'dark' ? 'text-gray-100' : 'text-gray-900'}`}>
+    <div
+      className={classNames({
+        'text-gray-100': theme === 'dark',
+        'text-gray-900': theme === 'light',
+      })}
+    >
       <NavBar />
-      <Hero />
-      <About />
-      <Skills />
-      <Portfolio />
-      <ContactMe />
+      <main className="flex flex-col gap-32 md:my-20 my-16">
+        <Hero />
+        <About />
+        <Skills />
+        <Portfolio />
+        <ContactMe />
+      </main>
       <Footer />
     </div>
   );
