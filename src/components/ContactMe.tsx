@@ -84,7 +84,11 @@ const ContactMe: FunctionComponent<ContactMeProps> = () => {
             </div>
           </div>
           <div className="md:justify-self-stretch md:-translate-x-24 mt-10 md:mt-0">
-            <form action="" className="grid grid-cols-1 gap-8">
+            <form
+              action="https://app.formbold.com/s/9EP5k"
+              method="POST"
+              className="grid grid-cols-1 gap-8"
+            >
               <div
                 className={classNames('form-control w-full rounded-lg', {
                   'bg-[#242D40]': theme === 'dark',
@@ -97,7 +101,10 @@ const ContactMe: FunctionComponent<ContactMeProps> = () => {
                   </span>
                 </label>
                 <input
+                  name="name"
                   type="text"
+                  required
+                  maxLength={50}
                   className="input w-full focus:outline-0 bg-transparent"
                 />
               </div>
@@ -113,7 +120,9 @@ const ContactMe: FunctionComponent<ContactMeProps> = () => {
                   </span>
                 </label>
                 <input
-                  type="text"
+                  name="email"
+                  type="email"
+                  required
                   className="input w-full focus:outline-0 bg-transparent"
                 />
               </div>
@@ -128,7 +137,12 @@ const ContactMe: FunctionComponent<ContactMeProps> = () => {
                     Message
                   </span>
                 </label>
-                <textarea className="textarea h-40 w-full focus:outline-0 bg-transparent"></textarea>
+                <textarea
+                  name="message"
+                  className="textarea h-40 w-full focus:outline-0 bg-transparent"
+                  required
+                  maxLength={200}
+                />
               </div>
               <button
                 type="submit"
