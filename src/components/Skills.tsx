@@ -20,11 +20,11 @@ const Skills: FunctionComponent<SkillsProps> = () => {
 
   return (
     <section id="skills">
-      <Container className="md:px-32 px-6">
+      <Container className="lg:px-32 px-6">
         <Title className="mb-1 text-center">Skills</Title>
         <SubTitle>My technical level</SubTitle>
 
-        <div className="mt-10 flex md:flex-row flex-col md:gap-20 gap-10">
+        <div className="mt-10 flex lg:flex-row flex-col lg:gap-20 gap-10">
           {/* Hard Skills */}
           <div className="collapse">
             <input

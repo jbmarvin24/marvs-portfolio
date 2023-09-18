@@ -19,7 +19,7 @@ function App() {
       })}
     >
       <NavBar />
-      <main className="flex flex-col gap-32 md:my-20 my-16">
+      <main className="flex flex-col gap-32 lg:my-20 my-16">
         <Hero />
         <About />
         <Skills />

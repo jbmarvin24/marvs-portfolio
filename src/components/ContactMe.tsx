@@ -16,11 +16,11 @@ const ContactMe: FunctionComponent<ContactMeProps> = () => {
 
   return (
     <section id="contact">
-      <Container className="md:px-32 px-8">
+      <Container className="lg:px-32 px-8">
         <Title className="mb-1 text-center">Contact Me</Title>
         <SubTitle>Get in touch</SubTitle>
-        <div className="grid md:grid-cols-2 grid-cols-1 mt-16 gap-8 items-start">
-          <div className="grid grid-cols-1 gap-10 md:pl-10">
+        <div className="grid lg:grid-cols-2 grid-cols-1 mt-16 gap-8 items-start">
+          <div className="grid grid-cols-1 gap-10 lg:pl-10">
             <div className="flex items-center">
               <LuMail className="h-7 w-7 text-primary" />
               <div className="ml-5">
@@ -83,7 +83,7 @@ const ContactMe: FunctionComponent<ContactMeProps> = () => {
               </div>
             </div>
           </div>
-          <div className="md:justify-self-stretch md:-translate-x-24 mt-10 md:mt-0">
+          <div className="lg:justify-self-stretch lg:-translate-x-24 mt-10 lg:mt-0">
             <form
               action="https://app.formbold.com/s/9EP5k"
               method="POST"

@@ -15,11 +15,11 @@ const Hero: FunctionComponent<HeroProps> = () => {
   const theme = useThemeStore((s) => s.theme);
 
   return (
-    <section className="md:mb-14 md:mt-14">
-      <Container className="md:px-32 px-6">
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-12">
+    <section className="lg:mb-14 lg:mt-14">
+      <Container className="lg:px-32 px-6">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-12">
           <div className="">
-            <div className="flex items-center md:gap-12 gap-12">
+            <div className="flex items-center lg:gap-12 gap-12">
               <div className="flex flex-col gap-6">
                 <div className="tooltip tooltip-top" data-tip="LinkedIn">
                   <a href={contacts.linkedIn.link} target="_blank">
@@ -32,8 +32,8 @@ const Hero: FunctionComponent<HeroProps> = () => {
                   </a>
                 </div>
               </div>
-              <div className="avatar md:ml-auto">
-                <div className="md:w-72 w-52 mask mask-hexagon-2">
+              <div className="avatar lg:ml-auto">
+                <div className="lg:w-72 w-52 mask mask-hexagon-2">
                   <img src="https://placehold.co/300" />
                 </div>
               </div>
@@ -58,7 +58,7 @@ const Hero: FunctionComponent<HeroProps> = () => {
             </a>
           </div>
         </div>
-        <div className="mt-24 md:flex flex-row gap-2 items-center ml-28 hidden">
+        <div className="mt-24 lg:flex flex-row gap-2 items-center ml-28 hidden">
           <CgMouse className="w-6 h-6 text-primary" />
           <p className="text-sm font-medium">Scroll down</p>
           <FiArrowDown className="text-primary" />

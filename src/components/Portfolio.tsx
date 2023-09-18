@@ -17,7 +17,7 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
 
   return (
     <section id="portfolio">
-      <Container className="md:px-32 px-0">
+      <Container className="lg:px-32 px-0">
         <Title className="mb-1 text-center">Portfolio</Title>
         <SubTitle>Most recent work</SubTitle>
 
@@ -29,9 +29,9 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
                 type="button"
                 onClick={onClickHandler}
                 title={label}
-                className="absolute z-10 md:top-[calc(50%-3rem)] top-[calc(50%)] cursor-pointer left-0"
+                className="absolute z-10 lg:top-[calc(50%-3rem)] top-[calc(50%)] cursor-pointer left-0"
               >
-                <IoIosArrowForward className="md:w-14 md:h-14 h-10 w-10 rotate-180 text-primary" />
+                <IoIosArrowForward className="lg:w-14 lg:h-14 h-10 w-10 rotate-180 text-primary" />
               </button>
             )}
             renderArrowNext={(onClickHandler, _, label) => (
@@ -39,9 +39,9 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
                 type="button"
                 onClick={onClickHandler}
                 title={label}
-                className="absolute z-10 md:top-[calc(50%-3rem)] top-[calc(50%)] cursor-pointer right-0"
+                className="absolute z-10 lg:top-[calc(50%-3rem)] top-[calc(50%)] cursor-pointer right-0"
               >
-                <IoIosArrowForward className="md:w-14 md:h-14 h-10 w-10 text-primary" />
+                <IoIosArrowForward className="lg:w-14 lg:h-14 h-10 w-10 text-primary" />
               </button>
             )}
             statusFormatter={() => ''}
@@ -79,7 +79,7 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
             {Array.from(Array(5), (_, i) => (
               <div
                 key={`slide${i + 1}`}
-                className="md:px-20 px-12 py-10 md:h-80 h-[34rem] text-left"
+                className="lg:px-20 px-12 py-10 lg:h-80 h-[34rem] text-left"
               >
                 <PortfolioCard
                   name={`Project ${i + 1}`}

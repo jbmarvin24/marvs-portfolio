@@ -18,13 +18,13 @@ const Footer: FunctionComponent<FooterProps> = () => {
         'text-gray-50': theme == 'light',
       })}
     >
-      <div className="grid md:grid-cols-2 grid-cols-1 md:px-40 max-w-5xl mx-auto md:justify-items-stretch md:gap-20 gap-16">
+      <div className="grid lg:grid-cols-2 grid-cols-1 lg:px-40 max-w-5xl mx-auto lg:justify-items-stretch lg:gap-20 gap-16">
         <div>
           <Title>Marvin</Title>
           <p className="text-sm mt-4">Fullstack developer</p>
         </div>
-        <div className="md:justify-self-end">
-          <ul className="grid md:grid-cols-3 grid-cols-1 md:gap-10 gap-5 text-md">
+        <div className="lg:justify-self-end">
+          <ul className="grid lg:grid-cols-3 grid-cols-1 lg:gap-10 gap-5 text-md">
             <li>
               <a href="#skills">Skills</a>
             </li>
@@ -41,18 +41,18 @@ const Footer: FunctionComponent<FooterProps> = () => {
         <a
           href="#"
           className={classNames(
-            'btn btn-primary md:px-1 px-1 md:opacity-100 opacity-80 min-h-0 h-9 md:h-8 rounded-md',
+            'btn btn-primary lg:px-1 px-1 lg:opacity-100 opacity-80 min-h-0 h-9 lg:h-8 rounded-md',
             {
               'border-gray-300': theme === 'light',
               'text-gray-50': theme === 'light',
             }
           )}
         >
-          <BiUpArrowAlt className="md:w-5 md:h-5 w-6 h-6" />
+          <BiUpArrowAlt className="lg:w-5 lg:h-5 w-6 h-6" />
         </a>
       </div>
       <p
-        className={classNames('text-center text-xs md:mt-16 mt-5', {
+        className={classNames('text-center text-xs lg:mt-16 mt-5', {
           'text-gray-400': theme === 'dark',
           'text-gray-300': theme == 'light',
         })}

@@ -23,13 +23,13 @@ const NavBar: FunctionComponent<NavBarProps> = () => {
 
   return (
     <header>
-      <Container className="md:px-32 px-6 md:py-8 py-5">
+      <Container className="lg:px-32 px-6 lg:py-8 py-5">
         <nav className="font-medium">
           <div className="flex justify-between mb-10">
-            <a href="#" className="grow md:text-base text-lg">
+            <a href="#" className="grow lg:text-base text-lg">
               Marvin
             </a>
-            <ul className="md:hidden flex gap-5">
+            <ul className="lg:hidden flex gap-5">
               <li>
                 <label className="swap swap-rotate">
                   {/* <!-- this hidden checkbox controls the state --> */}
@@ -85,7 +85,7 @@ const NavBar: FunctionComponent<NavBarProps> = () => {
             </ul>
 
             {/* Mobile View Nav */}
-            <ul className="md:flex gap-10 hidden text-sm">
+            <ul className="lg:flex gap-10 hidden text-sm">
               <li>
                 <a href="#">Home</a>
               </li>

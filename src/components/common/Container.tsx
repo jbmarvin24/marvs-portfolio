@@ -11,7 +11,9 @@ const Container: FunctionComponent<ContainerProps> = ({
   className,
 }) => {
   return (
-    <div className={classNames('max-w-6xl mx-auto', className)}>{children}</div>
+    <div className={classNames('lg:max-w-6xl max-w-2xl mx-auto', className)}>
+      {children}
+    </div>
   );
 };
 
