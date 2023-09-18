@@ -13,32 +13,45 @@ import Container from './common/Container';
 interface SkillsProps {}
 
 const Skills: FunctionComponent<SkillsProps> = () => {
-  const [hardSkillOpen, sethardSkillOpen] = useState(true);
-  const [AdditionalSkillsOpen, setAdditionalSkillsOpen] = useState(false);
+  const [hardSkillOpen, setHardSkillOpen] = useState(true);
+  const [additionalSkillsOpen, setAdditionalSkillsOpen] = useState(false);
+
+  const toggleHardSkill = () => setHardSkillOpen(!hardSkillOpen);
+  const toggleAddtlSkill = () => setAdditionalSkillsOpen(!additionalSkillsOpen);
 
   return (
     <section id="skills">
       <Container className="md:px-32 px-6">
         <Title className="mb-1 text-center">Skills</Title>
         <SubTitle>My technical level</SubTitle>
-        <div className="mt-10 flex md:flex-row flex-col md:gap-28 gap-10">
-          <div className="md:mx-0 mx-auto">
-            <div className="flex flex-row gap-4">
-              <BiCodeAlt className="text-primary w-10 h-10 my-auto" />
-              <div>
-                <h3 className="text-xl font-semibold">Hard skills</h3>
-                <Paragraph>Technologies I'm experienced with</Paragraph>
-              </div>
 
-              <button onClick={() => sethardSkillOpen(!hardSkillOpen)}>
-                <MdOutlineKeyboardArrowDown
-                  className={`text-primary w-8 h-8 my-auto ${
-                    hardSkillOpen ? 'rotate-180' : ''
-                  } transition ease-in-out duration-300`}
-                />
-              </button>
+        <div className="mt-10 flex md:flex-row flex-col md:gap-20 gap-10">
+          {/* Hard Skills */}
+          <div className="collapse md:mx-0 mx-auto">
+            <input
+              onClick={toggleHardSkill}
+              type="checkbox"
+              checked={hardSkillOpen}
+            />
+            <div className="collapse-title">
+              <div className="flex flex-row gap-4">
+                <BiCodeAlt className="text-primary w-10 h-10 my-auto" />
+                <div>
+                  <h3 className="text-xl font-semibold">Hard skills</h3>
+                  <Paragraph>Technologies I'm experienced with</Paragraph>
+                </div>
+
+                <button>
+                  <MdOutlineKeyboardArrowDown
+                    className={`text-primary w-8 h-8 my-auto ${
+                      hardSkillOpen ? 'rotate-180' : ''
+                    } transition ease-in-out duration-300`}
+                  />
+                </button>
+              </div>
             </div>
-            <Collapsible isOpen={hardSkillOpen}>
+
+            <div className="collapse-content">
               <div className="pb-5 pt-8 ml-14 flex flex-col max-w-xs mx-auto gap-6 md:mr-0 mr-10">
                 <TechStackProgress name="Typescript" value={85} />
                 <TechStackProgress name="C#" value={85} />
@@ -48,27 +61,29 @@ const Skills: FunctionComponent<SkillsProps> = () => {
                 <TechStackProgress name="SQL" value={90} />
                 <TechStackProgress name="HTML + CSS" value={80} />
               </div>
-            </Collapsible>
+            </div>
           </div>
 
-          <div className="md:mx-0 mx-auto">
-            <div className="flex flex-row gap-4">
-              <PiBooksDuotone className="text-primary w-10 h-10 my-auto" />
-              <div>
-                <h3 className="text-xl font-semibold">Additional skills</h3>
-                <Paragraph>What helps me to perform at my best</Paragraph>
+          {/* Additional Skills */}
+          <div className="collapse md:mx-0 mx-auto">
+            <input type="checkbox" onClick={toggleAddtlSkill} />
+            <div className="collapse-title">
+              <div className="flex flex-row gap-4">
+                <PiBooksDuotone className="text-primary w-10 h-10 my-auto" />
+                <div>
+                  <h3 className="text-xl font-semibold">Additional skills</h3>
+                  <Paragraph>What helps me to perform at my best</Paragraph>
+                </div>
+                <button>
+                  <MdOutlineKeyboardArrowDown
+                    className={`text-primary w-8 h-8 my-auto ${
+                      additionalSkillsOpen ? 'rotate-180' : ''
+                    } transition ease-in-out duration-300`}
+                  />
+                </button>
               </div>
-              <button
-                onClick={() => setAdditionalSkillsOpen(!AdditionalSkillsOpen)}
-              >
-                <MdOutlineKeyboardArrowDown
-                  className={`text-primary w-8 h-8 my-auto ${
-                    AdditionalSkillsOpen ? 'rotate-180' : ''
-                  } transition ease-in-out duration-300`}
-                />
-              </button>
             </div>
-            <Collapsible isOpen={AdditionalSkillsOpen}>
+            <div className="collapse-content">
               <div className="pb-5 pt-8 flex flex-col max-w-xs mx-auto gap-6 ml-14">
                 <p className="text-sm text-gray-400">Libraries & Tools</p>
                 <p>
@@ -111,7 +126,7 @@ const Skills: FunctionComponent<SkillsProps> = () => {
                   Power BI
                 </p>
               </div>
-            </Collapsible>
+            </div>
           </div>
         </div>
       </Container>

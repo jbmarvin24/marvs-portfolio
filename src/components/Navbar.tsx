@@ -1,7 +1,7 @@
 import { FunctionComponent, useEffect, useState } from 'react';
-import Collapsible from './common/Collapsible';
 import useThemeStore from '../themeStore';
 import Container from './common/Container';
+import classNames from 'classnames';
 
 interface NavBarProps {}
 
@@ -10,9 +10,7 @@ const NavBar: FunctionComponent<NavBarProps> = () => {
   const theme = useThemeStore((s) => s.theme);
   const toggleTheme = useThemeStore((s) => s.toggleTheme);
 
-  const toggleMobileNav = () => {
-    setMobileNav(!mobileNav);
-  };
+  const toggleMobileNav = () => setMobileNav(!mobileNav);
 
   useEffect(() => {
     document
@@ -86,6 +84,7 @@ const NavBar: FunctionComponent<NavBarProps> = () => {
               </li>
             </ul>
 
+            {/* Mobile View Nav */}
             <ul className="md:flex gap-10 hidden text-sm">
               <li>
                 <a href="#">Home</a>
@@ -129,25 +128,31 @@ const NavBar: FunctionComponent<NavBarProps> = () => {
             </ul>
           </div>
 
-          <Collapsible isOpen={mobileNav}>
-            <ul className="grid grid-cols-1 gap-5 text-base">
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#skills">Skills</a>
-              </li>
-              <li>
-                <a href="#portfolio">Portfolio</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-          </Collapsible>
+          <div
+            className={classNames('collapse rounded-none', {
+              'collapse-open': mobileNav,
+            })}
+          >
+            <div className="collapse-content p-0">
+              <ul className="grid grid-cols-1 gap-5 text-base">
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#about">About</a>
+                </li>
+                <li>
+                  <a href="#skills">Skills</a>
+                </li>
+                <li>
+                  <a href="#portfolio">Portfolio</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
       </Container>
     </header>
