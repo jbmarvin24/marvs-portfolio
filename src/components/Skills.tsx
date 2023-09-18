@@ -26,14 +26,14 @@ const Skills: FunctionComponent<SkillsProps> = () => {
 
         <div className="mt-10 flex md:flex-row flex-col md:gap-20 gap-10">
           {/* Hard Skills */}
-          <div className="collapse md:mx-0 mx-auto">
+          <div className="collapse">
             <input
               onClick={toggleHardSkill}
               type="checkbox"
               checked={hardSkillOpen}
             />
             <div className="collapse-title">
-              <div className="flex flex-row gap-4">
+              <div className="flex flex-row gap-4 justify-center">
                 <BiCodeAlt className="text-primary w-10 h-10 my-auto" />
                 <div>
                   <h3 className="text-xl font-semibold">Hard skills</h3>
@@ -51,7 +51,7 @@ const Skills: FunctionComponent<SkillsProps> = () => {
             </div>
 
             <div className="collapse-content">
-              <div className="pb-5 pt-8 ml-14 flex flex-col max-w-xs mx-auto gap-6 md:mr-0 mr-10">
+              <div className="flex flex-col gap-6 max-w-sm py-8 px-10 mx-auto">
                 <TechStackProgress name="Typescript" value={85} />
                 <TechStackProgress name="C#" value={85} />
                 <TechStackProgress name="ASP.NET MVC + API" value={80} />
@@ -64,10 +64,10 @@ const Skills: FunctionComponent<SkillsProps> = () => {
           </div>
 
           {/* Additional Skills */}
-          <div className="collapse md:mx-0 mx-auto">
+          <div className="collapse">
             <input type="checkbox" onClick={toggleAddtlSkill} />
             <div className="collapse-title">
-              <div className="flex flex-row gap-4">
+              <div className="flex flex-row gap-4 justify-center">
                 <PiBooksDuotone className="text-primary w-10 h-10 my-auto" />
                 <div>
                   <h3 className="text-xl font-semibold">Additional skills</h3>
@@ -83,7 +83,7 @@ const Skills: FunctionComponent<SkillsProps> = () => {
               </div>
             </div>
             <div className="collapse-content">
-              <div className="pb-5 pt-8 flex flex-col max-w-xs mx-auto gap-6 ml-14">
+              <div className="py-8 flex flex-col max-w-sm mx-auto gap-6 px-10">
                 <p className="text-sm text-gray-400">Libraries & Tools</p>
                 <p>
                   <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
