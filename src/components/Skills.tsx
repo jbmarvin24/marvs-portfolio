@@ -4,7 +4,6 @@ import { BiCodeAlt } from 'react-icons/bi';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { PiBooksDuotone } from 'react-icons/pi';
 import { BsCheckLg } from 'react-icons/bs';
-import Collapsible from './common/Collapsible';
 import Title from './common/Title';
 import SubTitle from './common/SubTitle';
 import Paragraph from './common/Paragraph';
