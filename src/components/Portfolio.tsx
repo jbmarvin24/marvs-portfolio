@@ -9,6 +9,7 @@ import SubTitle from './common/SubTitle';
 import classNames from 'classnames';
 import useThemeStore from '../themeStore';
 import Container from './common/Container';
+import { Link } from 'react-router-dom';
 
 interface PortfolioProps {}
 
@@ -92,12 +93,12 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
             ))}
           </Carousel>
 
-          <a
-            href="/#"
+          <Link
+            to="/portfolio"
             className="mt-5 text-sm text-center hover:underline cursor-pointer block"
           >
             Show all <FaArrowRight className="inline-block" />
-          </a>
+          </Link>
         </div>
       </Container>
     </section>
