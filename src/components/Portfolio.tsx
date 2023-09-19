@@ -24,6 +24,7 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
         <div className="mt-6">
           <Carousel
             swipeable={false}
+            showThumbs={false}
             renderArrowPrev={(onClickHandler, _, label) => (
               <button
                 type="button"
