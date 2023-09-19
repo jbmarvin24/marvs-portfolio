@@ -28,7 +28,7 @@ const Skills: FunctionComponent<SkillsProps> = () => {
           {/* Hard Skills */}
           <div className="collapse">
             <input
-              onClick={toggleHardSkill}
+              onChange={toggleHardSkill}
               type="checkbox"
               checked={hardSkillOpen}
             />
