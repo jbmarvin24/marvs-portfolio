@@ -7,8 +7,6 @@ interface ErrorPage {}
 const ErrorPage: FunctionComponent<ErrorPage> = () => {
   const error = useRouteError();
 
-  console.log(error);
-
   return (
     <Container className="my-20 text-center">
       <div>
