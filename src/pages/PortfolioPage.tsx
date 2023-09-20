@@ -4,7 +4,6 @@ import Title from '../components/common/Title';
 import SubTitle from '../components/common/SubTitle';
 import Paragraph from '../components/common/Paragraph';
 import { BsGithub } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 
 interface PortfolioPageProps {}
@@ -56,10 +55,10 @@ const PortfolioPage: FunctionComponent<PortfolioPageProps> = () => {
           ))}
         </div>
         <div className="flex justify-center mt-16">
-          <Link to="/" className="link">
+          <button className="link" onClick={() => window.history.back()}>
             <FaArrowRight className="w-5 h-5 inline-block mr-1 rotate-180" />
             Back
-          </Link>
+          </button>
         </div>
       </Container>
     </section>
