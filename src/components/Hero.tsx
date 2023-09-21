@@ -49,8 +49,8 @@ const Hero: FunctionComponent<HeroProps> = () => {
               Fullstack developer
             </h3>
             <Paragraph>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi,
-              molestias.
+              A passionate Full Stack Developer with a deep love for turning
+              ideas into digital realities.
             </Paragraph>
             <a href="#contact" className="my-6 btn btn-primary capitalize">
               Contact Me

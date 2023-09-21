@@ -23,10 +23,10 @@ const About: FunctionComponent<AboutProps> = () => {
           </div>
           <div>
             <Paragraph className="leading-relaxed lg:text-left text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium, ipsam sint maiores mollitia odio repudiandae nihil at
-              veritatis ab rerum fuga, modi, ex vero. Molestias hic animi in
-              libero voluptates.
+              Full Stack Web Developer specializing in TypeScript and ASP.NET
+              C#. Enthusiast of Rubik's Cube solving. Passionate about crafting
+              impactful digital solutions that blend creativity and
+              functionality.
             </Paragraph>
             <div className="text-center">
               <button className="btn btn-primary lg:mt-20 mt-14 text-white">
