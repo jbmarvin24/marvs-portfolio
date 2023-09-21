@@ -3,47 +3,50 @@ import TechStackProgress from './common/TechStackProgress';
 import { BiCodeAlt } from 'react-icons/bi';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { PiBooksDuotone } from 'react-icons/pi';
-import { BsCheckLg } from 'react-icons/bs';
 import Title from './common/Title';
 import SubTitle from './common/SubTitle';
 import Paragraph from './common/Paragraph';
 import Container from './common/Container';
+import { BsFillCircleFill } from 'react-icons/bs';
+import { HiOutlineLightBulb } from 'react-icons/hi';
 
 interface SkillsProps {}
 
 const Skills: FunctionComponent<SkillsProps> = () => {
-  const [hardSkillOpen, setHardSkillOpen] = useState(true);
+  const [techStackOpen, setTechStackOpen] = useState(true);
   const [additionalSkillsOpen, setAdditionalSkillsOpen] = useState(false);
+  const [hardSkillOpen, setHardSkillOpen] = useState(true);
 
-  const toggleHardSkill = () => setHardSkillOpen(!hardSkillOpen);
+  const toggleTechStack = () => setTechStackOpen(!techStackOpen);
   const toggleAddtlSkill = () => setAdditionalSkillsOpen(!additionalSkillsOpen);
+  const toggleHardSkill = () => setHardSkillOpen(!hardSkillOpen);
 
   return (
     <section id="skills">
-      <Container className="lg:px-32 px-6">
+      <Container className="lg:px-10 px-6">
         <Title className="mb-1 text-center">Skills</Title>
         <SubTitle>My technical level</SubTitle>
 
-        <div className="mt-10 flex lg:flex-row flex-col lg:gap-20 gap-10">
-          {/* Hard Skills */}
+        <div className="mt-10 flex lg:flex-row flex-col lg:gap-0 gap-10">
+          {/* Tech Stack */}
           <div className="collapse">
             <input
-              onChange={toggleHardSkill}
+              onChange={toggleTechStack}
               type="checkbox"
-              checked={hardSkillOpen}
+              checked={techStackOpen}
             />
             <div className="collapse-title">
               <div className="flex flex-row gap-4 justify-center">
-                <BiCodeAlt className="text-primary w-10 h-10 my-auto" />
+                <BiCodeAlt className="text-primary w-12 h-12 my-auto" />
                 <div>
-                  <h3 className="text-xl font-semibold">Hard skills</h3>
+                  <h3 className="text-xl font-semibold">Tech Stack</h3>
                   <Paragraph>Technologies I'm experienced with</Paragraph>
                 </div>
 
                 <button>
                   <MdOutlineKeyboardArrowDown
                     className={`text-primary w-8 h-8 my-auto ${
-                      hardSkillOpen ? 'rotate-180' : ''
+                      techStackOpen ? 'rotate-180' : ''
                     } transition ease-in-out duration-300`}
                   />
                 </button>
@@ -63,12 +66,67 @@ const Skills: FunctionComponent<SkillsProps> = () => {
             </div>
           </div>
 
-          {/* Additional Skills */}
+          {/* Hard Skills */}
           <div className="collapse">
-            <input type="checkbox" onClick={toggleAddtlSkill} />
+            <input
+              type="checkbox"
+              onChange={toggleHardSkill}
+              checked={hardSkillOpen}
+            />
             <div className="collapse-title">
               <div className="flex flex-row gap-4 justify-center">
-                <PiBooksDuotone className="text-primary w-10 h-10 my-auto" />
+                <HiOutlineLightBulb className="text-primary w-12 h-12 my-auto" />
+                <div>
+                  <h3 className="text-xl font-semibold">Hard Skills</h3>
+                  <Paragraph>
+                    Proficiencies and talents I bring to the table
+                  </Paragraph>
+                </div>
+                <button>
+                  <MdOutlineKeyboardArrowDown
+                    className={`text-primary w-8 h-8 my-auto ${
+                      hardSkillOpen ? 'rotate-180' : ''
+                    } transition ease-in-out duration-300`}
+                  />
+                </button>
+              </div>
+            </div>
+            <div className="collapse-content">
+              <div className="py-8 flex flex-col max-w-sm mx-auto gap-6 pl-10 pr-4">
+                <p>
+                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />
+                  Develop Full stack web applications.
+                </p>
+                <p>
+                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />
+                  Build Restful API's.
+                </p>
+                <p>
+                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />
+                  Build Server-side logic and databases.
+                </p>
+                <p>
+                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />
+                  Build cloud native applications.
+                </p>
+                <p>
+                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />
+                  Perform testing and debugging.
+                </p>
+                <p>
+                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />
+                  Create reports for analysis.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Additional Skills */}
+          <div className="collapse">
+            <input type="checkbox" onChange={toggleAddtlSkill} />
+            <div className="collapse-title">
+              <div className="flex flex-row gap-4 justify-center">
+                <PiBooksDuotone className="text-primary w-12 h-12 my-auto" />
                 <div>
                   <h3 className="text-xl font-semibold">Additional skills</h3>
                   <Paragraph>What helps me to perform at my best</Paragraph>
@@ -86,42 +144,42 @@ const Skills: FunctionComponent<SkillsProps> = () => {
               <div className="py-8 flex flex-col max-w-sm mx-auto gap-6 px-10">
                 <p className="text-sm text-gray-400">Libraries & Tools</p>
                 <p>
-                  <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
+                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />{' '}
                   Git + GitHub
                 </p>
                 <p>
-                  <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
+                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />{' '}
                   Docker + DockerHub
                 </p>
                 <p>
-                  <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
+                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />{' '}
                   Postman
                 </p>
                 <p className="text-sm text-gray-400">Databases</p>
                 <p>
-                  <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
+                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />{' '}
                   SQL Server
                 </p>
                 <p>
-                  <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
+                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />{' '}
                   MySQL
                 </p>
                 <p>
-                  <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
+                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />{' '}
                   Postgres
                 </p>
                 <p className="text-sm text-gray-400">Cloud Platforms</p>
                 <p>
-                  <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
+                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />{' '}
                   Azure + Azure DevOps
                 </p>
                 <p>
-                  <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
+                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />{' '}
                   Firebase
                 </p>
                 <p className="text-sm text-gray-400">Others</p>
                 <p>
-                  <BsCheckLg className="text-primary inline-block w-6 h-6" />{' '}
+                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />{' '}
                   Power BI
                 </p>
               </div>
