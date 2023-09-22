@@ -14,8 +14,8 @@ interface SkillsProps {}
 
 const Skills: FunctionComponent<SkillsProps> = () => {
   const [techStackOpen, setTechStackOpen] = useState(true);
+  const [hardSkillOpen, setHardSkillOpen] = useState(false);
   const [additionalSkillsOpen, setAdditionalSkillsOpen] = useState(false);
-  const [hardSkillOpen, setHardSkillOpen] = useState(true);
 
   const toggleTechStack = () => setTechStackOpen(!techStackOpen);
   const toggleAddtlSkill = () => setAdditionalSkillsOpen(!additionalSkillsOpen);
