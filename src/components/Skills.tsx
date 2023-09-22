@@ -93,30 +93,32 @@ const Skills: FunctionComponent<SkillsProps> = () => {
             </div>
             <div className="collapse-content">
               <div className="py-8 flex flex-col max-w-sm mx-auto gap-6 pl-10 pr-4">
-                <p>
-                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />
-                  Develop Full stack web applications.
-                </p>
-                <p>
-                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />
-                  Build Restful API's.
-                </p>
-                <p>
-                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />
-                  Build Server-side logic and databases.
-                </p>
-                <p>
-                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />
-                  Build cloud native applications.
-                </p>
-                <p>
-                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />
-                  Perform testing and debugging.
-                </p>
-                <p>
-                  <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-2" />
-                  Create reports for analysis.
-                </p>
+                <ul className="space-y-7">
+                  <li>
+                    <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-3" />
+                    Develop Full stack web applications.
+                  </li>
+                  <li>
+                    <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-3" />
+                    Build Restful API's.
+                  </li>
+                  <li>
+                    <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-3" />
+                    Build Server-side logic and databases.
+                  </li>
+                  <li>
+                    <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-3" />
+                    Build cloud native applications.
+                  </li>
+                  <li>
+                    <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-3" />
+                    Perform testing and debugging.
+                  </li>
+                  <li>
+                    <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-3" />
+                    Create reports for analysis.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
