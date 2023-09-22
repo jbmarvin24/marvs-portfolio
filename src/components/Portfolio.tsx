@@ -10,6 +10,7 @@ import classNames from 'classnames';
 import useThemeStore from '../themeStore';
 import Container from './common/Container';
 import { Link } from 'react-router-dom';
+import { portfolios } from '../data/portfolios';
 
 interface PortfolioProps {}
 
@@ -41,7 +42,7 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
                 type="button"
                 onClick={onClickHandler}
                 title={label}
-                className="absolute z-10 lg:top-[calc(50%-3rem)] top-[calc(50%)] cursor-pointer right-0"
+                className="absolute z-10 lg:top-[calc(50%-3.5rem)] top-[calc(50%)] cursor-pointer right-0"
               >
                 <IoIosArrowForward className="lg:w-14 lg:h-14 h-10 w-10 text-primary" />
               </button>
@@ -78,27 +79,24 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
               );
             }}
           >
-            {Array.from(Array(5), (_, i) => (
-              <div
-                key={`slide${i + 1}`}
-                className="lg:px-20 px-12 py-10 lg:h-80 h-[34rem] text-left"
-              >
-                <PortfolioCard
-                  name={`Project ${i + 1}`}
-                  description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-          vero voluptatum facere ipsam sit magnam eum dicta cumque laudantium
-          sed!"
-                />
-              </div>
-            ))}
+            {portfolios
+              .filter((p) => p.isTop)
+              .sort((a, b) => a.order - b.order)
+              .map((p, i) => (
+                <div
+                  key={`slide${i + 1}`}
+                  className="lg:px-20 px-12 py-10 lg:h-[23rem] h-[34rem] text-left"
+                >
+                  <PortfolioCard portfolio={p} />
+                </div>
+              ))}
           </Carousel>
 
-          <Link
-            to="/portfolio"
-            className="mt-5 text-sm text-center hover:underline cursor-pointer block"
-          >
-            Show all <FaArrowRight className="inline-block" />
-          </Link>
+          <div className="mt-5 mx-auto text-center">
+            <Link to="/portfolio" className="text-sm hover:underline">
+              Show all <FaArrowRight className="inline-block" />
+            </Link>
+          </div>
         </div>
       </Container>
     </section>
