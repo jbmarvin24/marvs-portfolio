@@ -7,6 +7,7 @@ export interface IPortfolio {
   demoUrl: string;
   isTop: boolean;
   order: number;
+  isPrivate: boolean;
 }
 
 export const portfolios: IPortfolio[] = [
@@ -20,6 +21,7 @@ export const portfolios: IPortfolio[] = [
     demoUrl: 'https://marvs-ecommerce-api.azurewebsites.net/',
     isTop: true,
     order: 1,
+    isPrivate: false,
   },
   {
     name: 'Marvs GameHub',
@@ -38,6 +40,7 @@ export const portfolios: IPortfolio[] = [
     image: 'img/marvs-gamehub.png',
     isTop: true,
     order: 2,
+    isPrivate: false,
   },
   {
     name: 'Marvsify',
@@ -49,5 +52,18 @@ export const portfolios: IPortfolio[] = [
     image: 'img/marvsify.png',
     isTop: true,
     order: 3,
+    isPrivate: false,
+  },
+  {
+    name: 'Sample Private Portfolio',
+    description:
+      'This website serves as a demonstration of a Cloud Hosting Platform. It highlights the benefits, features, and services that a cloud hosting provider can offer.',
+    techStacks: ['HTML5', 'CSS3', 'Netlify'],
+    demoUrl: '',
+    gitHubRepoUrl: '',
+    image: 'https://placehold.co/400x200?text=Private',
+    isTop: false,
+    order: 4,
+    isPrivate: true,
   },
 ];
