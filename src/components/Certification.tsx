@@ -29,10 +29,8 @@ const Certification: FunctionComponent<CertificationProps> = () => {
               })}
             >
               <div className="card-body">
-                <h2 className="card-title">
-                  <PiCertificateBold className="h-14 w-14" />
-                  {cert.name}
-                </h2>
+                <PiCertificateBold className="h-10 w-10 text-primary" />
+                <h2 className="card-title mt-3">{cert.name}</h2>
                 <Paragraph>{cert.issueBy}</Paragraph>
                 <div className="card-actions mt-4">
                   <a
