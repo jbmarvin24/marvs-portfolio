@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import useThemeStore from '../themeStore';
 import NavBar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Certification from '../components/Certification';
 
 function HomePage() {
   const theme = useThemeStore((s) => s.theme);
@@ -23,6 +24,7 @@ function HomePage() {
         <Hero />
         <About />
         <Skills />
+        <Certification />
         <Portfolio />
         <ContactMe />
       </main>
