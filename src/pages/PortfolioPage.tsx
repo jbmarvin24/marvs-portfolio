@@ -28,7 +28,13 @@ const PortfolioPage: FunctionComponent<PortfolioPageProps> = () => {
           {portfolios
             .sort((a, b) => a.order - b.order)
             .map((p, i) => (
-              <div key={i} className="card w-96 bg-base-100 shadow-xl">
+              <div
+                key={i}
+                className={classNames('card w-96 shadow-xl', {
+                  'bg-[#1D2335]': theme === 'dark',
+                  'bg-white': theme === 'light',
+                })}
+              >
                 <figure>
                   <img
                     className="object-fill h-48 w-full"
