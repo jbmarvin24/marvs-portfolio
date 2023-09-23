@@ -35,7 +35,7 @@ const Certification: FunctionComponent<CertificationProps> = () => {
                 <div className="card-actions mt-4">
                   <a
                     href={cert.credentialUrl}
-                    className="link text-sm text-primary font-medium"
+                    className="link no-underline text-sm text-primary font-medium"
                     target="_blank"
                   >
                     View Credential
