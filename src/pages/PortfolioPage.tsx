@@ -8,7 +8,6 @@ import { FaArrowRight } from 'react-icons/fa';
 import { IPortfolio, portfolios } from '../data/portfolios';
 import useThemeStore from '../themeStore';
 import classNames from 'classnames';
-import { BsFillInfoCircleFill } from 'react-icons/bs';
 
 interface PortfolioPageProps {}
 
@@ -91,17 +90,15 @@ const PortfolioPage: FunctionComponent<PortfolioPageProps> = () => {
                           </a>
                         </div>
                       )}
-                      {p.moreInfo && (
-                        <div
-                          className="tooltip tooltip-top"
-                          data-tip="more info"
-                        >
-                          <button onClick={() => handleDialogOpen(p)}>
-                            <BsFillInfoCircleFill className="w-5 h-5" />
-                          </button>
-                        </div>
-                      )}
                     </div>
+                    {p.moreInfo && (
+                      <button
+                        className="btn btn-outline"
+                        onClick={() => handleDialogOpen(p)}
+                      >
+                        More Info
+                      </button>
+                    )}
                     {p.demoUrl && (
                       <a
                         href={p.demoUrl}
