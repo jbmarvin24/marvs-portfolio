@@ -86,7 +86,7 @@ const PortfolioPage: FunctionComponent<PortfolioPageProps> = () => {
                           data-tip="repository"
                         >
                           <a href={p.gitHubRepoUrl} target="_blank">
-                            <BsGithub className="w-5 h-5" />
+                            <BsGithub className="w-6 h-6 mt-2" />
                           </a>
                         </div>
                       )}
