@@ -7,7 +7,10 @@ export interface IPortfolio {
   demoUrl: string;
   isTop: boolean;
   order: number;
-  isPrivate: boolean;
+  moreInfo?: {
+    title: string;
+    content: string[];
+  }[];
 }
 
 export const portfolios: IPortfolio[] = [
@@ -21,7 +24,6 @@ export const portfolios: IPortfolio[] = [
     demoUrl: 'https://marvs-ecommerce-api.azurewebsites.net/',
     isTop: true,
     order: 1,
-    isPrivate: false,
   },
   {
     name: 'Marvs GameHub',
@@ -40,7 +42,6 @@ export const portfolios: IPortfolio[] = [
     image: 'img/marvs-gamehub.png',
     isTop: true,
     order: 2,
-    isPrivate: false,
   },
   {
     name: 'Marvsify',
@@ -52,18 +53,73 @@ export const portfolios: IPortfolio[] = [
     image: 'img/marvsify.png',
     isTop: true,
     order: 3,
-    isPrivate: false,
   },
   {
-    name: 'Sample Private Portfolio',
+    name: 'CVM Finance Loan System',
     description:
-      'This website serves as a demonstration of a Cloud Hosting Platform. It highlights the benefits, features, and services that a cloud hosting provider can offer.',
-    techStacks: ['HTML5', 'CSS3', 'Netlify'],
+      'CVM Finance in-house loan system that effectively automates various aspects of the loan lifecycle, including loan application processing, verification procedures, fund disbursement, repayment tracking, and much more.',
+    techStacks: ['Next JS', 'Express JS', 'SQL Server', 'Prisma 2'],
     demoUrl: '',
     gitHubRepoUrl: '',
     image: 'https://placehold.co/400x200?text=Private',
     isTop: false,
     order: 4,
-    isPrivate: true,
+    moreInfo: [
+      {
+        title: 'Company',
+        content: ['CVM Finance'],
+      },
+      {
+        title: 'My Responsibilities',
+        content: [
+          'Ensure the project is delivered on schedule.',
+          'Create a project timeline.',
+          'Design the user interface.',
+          'Establish API routes for frontend developers.',
+          'Develop the business logic.',
+          'Architect the database structure.',
+          'Generate reports for analysis.',
+          'Facilitate API routes to integrate with other systems.',
+        ],
+      },
+    ],
+  },
+  {
+    name: 'CVM Finance Payroll System',
+    description:
+      'Design and implement a comprehensive Payroll system tailored for CVM Finance, streamlining their payroll processing workflow.',
+    techStacks: [
+      'React JS',
+      'C#',
+      'ASP.NET API',
+      'Entity Framework',
+      'SQL Server',
+    ],
+    demoUrl: '',
+    gitHubRepoUrl: '',
+    image: 'https://placehold.co/400x200?text=Private',
+    isTop: false,
+    order: 4,
+    moreInfo: [
+      {
+        title: 'Company',
+        content: ['CVM Finance'],
+      },
+      {
+        title: 'Applications',
+        content: ['Payroll System Desktop App', 'Employee Portal Web App'],
+      },
+      {
+        title: 'My Responsibilities',
+        content: [
+          'Ensure the project is delivered on schedule.',
+          'Design the user interface.',
+          'Develop the business logic.',
+          'Develop API for Employee Portal front end.',
+          'Architect the database structure.',
+          'Generate reports for analysis.',
+        ],
+      },
+    ],
   },
 ];

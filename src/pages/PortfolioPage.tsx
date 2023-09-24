@@ -1,18 +1,31 @@
-import { FunctionComponent, useEffect } from 'react';
+import { FunctionComponent, useEffect, useRef, useState } from 'react';
 import Container from '../components/common/Container';
 import Title from '../components/common/Title';
 import SubTitle from '../components/common/SubTitle';
 import Paragraph from '../components/common/Paragraph';
 import { BsGithub } from 'react-icons/bs';
 import { FaArrowRight } from 'react-icons/fa';
-import { portfolios } from '../data/portfolios';
+import { IPortfolio, portfolios } from '../data/portfolios';
 import useThemeStore from '../themeStore';
 import classNames from 'classnames';
+import { BsFillInfoCircleFill } from 'react-icons/bs';
 
 interface PortfolioPageProps {}
 
 const PortfolioPage: FunctionComponent<PortfolioPageProps> = () => {
   const theme = useThemeStore((s) => s.theme);
+  const dialogRef = useRef(null);
+  const [selectedPortfolio, setSelectedPortfolio] = useState<IPortfolio | null>(
+    null
+  );
+
+  const handleDialogOpen = (portfolio: IPortfolio) => {
+    setSelectedPortfolio(portfolio);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    dialogRef.current?.showModal();
+  };
+  // console.log(ref);
 
   useEffect(() => {
     window.scroll({ top: 0, behavior: 'instant' });
@@ -67,7 +80,7 @@ const PortfolioPage: FunctionComponent<PortfolioPageProps> = () => {
                   </div>
                   <Paragraph className="mt-2">{p.description}</Paragraph>
                   <div className="card-actions mt-5">
-                    <div className="grow my-auto">
+                    <div className="space-x-4 grow my-auto">
                       {p.gitHubRepoUrl && (
                         <div
                           className="tooltip tooltip-top"
@@ -76,6 +89,16 @@ const PortfolioPage: FunctionComponent<PortfolioPageProps> = () => {
                           <a href={p.gitHubRepoUrl} target="_blank">
                             <BsGithub className="w-5 h-5" />
                           </a>
+                        </div>
+                      )}
+                      {p.moreInfo && (
+                        <div
+                          className="tooltip tooltip-top"
+                          data-tip="more info"
+                        >
+                          <button onClick={() => handleDialogOpen(p)}>
+                            <BsFillInfoCircleFill className="w-5 h-5" />
+                          </button>
                         </div>
                       )}
                     </div>
@@ -99,6 +122,30 @@ const PortfolioPage: FunctionComponent<PortfolioPageProps> = () => {
             Back
           </button>
         </div>
+
+        <dialog id="my_modal_1" className="modal" ref={dialogRef}>
+          <div className="modal-box">
+            <h3 className="font-bold text-lg">{selectedPortfolio?.name}</h3>
+            <div className="py-4 space-y-5">
+              {selectedPortfolio?.moreInfo?.map((info, i) => (
+                <div key={i} className="space-y-2">
+                  <h6 className="font-medium">{info.title}</h6>
+                  <ul className="list-disc list-inside">
+                    {info.content.map((c, i) => (
+                      <li key={i}>{c}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <div className="modal-action">
+              <form method="dialog">
+                {/* if there is a button in form, it will close the modal */}
+                <button className="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
       </Container>
     </section>
   );
