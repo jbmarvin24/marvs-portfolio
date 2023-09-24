@@ -16,7 +16,7 @@ const Certification: FunctionComponent<CertificationProps> = () => {
 
   return (
     <section id="portfolio">
-      <Container className="lg:px-32 px-0">
+      <Container className="lg:px-32 px-10">
         <Title className="mb-1 text-center">Certifications</Title>
         <SubTitle>My credential accomplishments</SubTitle>
         <div className="flex flex-wrap justify-center mt-10">
