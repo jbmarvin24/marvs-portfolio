@@ -32,7 +32,7 @@ const PortfolioPage: FunctionComponent<PortfolioPageProps> = () => {
 
   return (
     <section>
-      <Container className="my-20">
+      <Container className="my-20 lg:px-0 px-5">
         <Title className="mb-1 text-center">Portfolio</Title>
         <SubTitle>Most recent work</SubTitle>
 
