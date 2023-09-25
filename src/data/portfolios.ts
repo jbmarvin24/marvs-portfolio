@@ -67,7 +67,7 @@ export const portfolios: IPortfolio[] = [
     moreInfo: [
       {
         title: 'Company',
-        content: ['CVM Finance'],
+        content: ['CVM Finance & Credit Corp.'],
       },
       {
         title: 'My Responsibilities',
@@ -80,6 +80,8 @@ export const portfolios: IPortfolio[] = [
           'Architect the database structure.',
           'Generate reports for analysis.',
           'Facilitate API routes to integrate with other systems.',
+          'Set up continuous integration and delivery.',
+          'Set up data migration from old system.',
         ],
       },
     ],
@@ -87,7 +89,7 @@ export const portfolios: IPortfolio[] = [
   {
     name: 'CVM Finance Payroll System',
     description:
-      'Design and implement a comprehensive Payroll system tailored for CVM Finance, streamlining their payroll processing workflow.',
+      'Design and implement a comprehensive Payroll System tailored for CVM Finance, streamlining their payroll processing workflow.',
     techStacks: [
       'React JS',
       'C#',
@@ -99,11 +101,11 @@ export const portfolios: IPortfolio[] = [
     gitHubRepoUrl: '',
     image: 'https://placehold.co/400x200?text=Private',
     isTop: false,
-    order: 4,
+    order: 5,
     moreInfo: [
       {
         title: 'Company',
-        content: ['CVM Finance'],
+        content: ['CVM Finance & Credit Corp.'],
       },
       {
         title: 'Applications',
@@ -118,6 +120,125 @@ export const portfolios: IPortfolio[] = [
           'Develop API for Employee Portal front end.',
           'Architect the database structure.',
           'Generate reports for analysis.',
+          'Set up data migration from manual.',
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Car Dealership Reviews',
+    description:
+      'My capstone project to my IBM Full Stack Software Developer Certification, A national car dealership with branches across the United States conducted a survey, revealing a suggestion for a central database of dealership reviews nationwide to benefit customers.',
+    techStacks: ['Python', 'Django', 'IBM Cloud', 'Microservices'],
+    demoUrl: '',
+    gitHubRepoUrl:
+      'https://github.com/jbmarvin24/agfzb-CloudAppDevelopment_Capstone',
+    image: 'https://placehold.co/400x200?text=Sample',
+    isTop: false,
+    order: 6,
+    moreInfo: [
+      {
+        title: 'Type',
+        content: ['Capstone Project'],
+      },
+      {
+        title: 'Tech Stacks',
+        content: [
+          'Python',
+          'Django',
+          'Javascript',
+          'IBM Cloud Functions',
+          'IBM Watsons NLU Service',
+          'IBM Cloudant',
+          'Kubernetes',
+          'Docker',
+        ],
+      },
+      {
+        title: 'My Responsibilities',
+        content: [
+          'Implement user management using the Django user authentication system.',
+          'Set up continuous integration and delivery.',
+          'Create cloud functions to manage dealers and reviews.',
+          'Create Django models and views to manage car model and car make.',
+          'Create Django proxy services and views to integrate dealers, reviews, and cars together.',
+        ],
+      },
+    ],
+  },
+  {
+    name: 'CVM Finance Website',
+    description:
+      'Customize website for CVM Finance and provide functionality for customers to make online loan payments.',
+    techStacks: ['React JS', 'Express JS', 'MySQL'],
+    demoUrl: 'https://cvmfinance.com',
+    gitHubRepoUrl: '',
+    image: 'img/cvmfcc-website.png',
+    isTop: false,
+    order: 7,
+    moreInfo: [
+      {
+        title: 'Company',
+        content: ['CVM Finance & Credit Corp.'],
+      },
+      {
+        title: 'My Responsibilities',
+        content: [
+          'Ensure the project is delivered on schedule.',
+          'Integration with Payment Gateways',
+          'Design the user interface.',
+          'Develop the business logic.',
+          'Develop API routes',
+        ],
+      },
+    ],
+  },
+  {
+    name: 'PCAP Game Administration',
+    description:
+      'Automate the scheduling, player line up and result management of games for the Professional Chess Association Of The Philippines.',
+    techStacks: ['Next JS', 'Firebase'],
+    demoUrl: '',
+    gitHubRepoUrl: '',
+    image: 'https://placehold.co/400x200?text=Private',
+    isTop: false,
+    order: 8,
+    moreInfo: [
+      {
+        title: 'Type',
+        content: ['Freelance Project'],
+      },
+      {
+        title: 'My Responsibilities',
+        content: [
+          'Ensure the project is delivered on schedule.',
+          'Design the user interface.',
+          'Develop the business logic.',
+          'Architect the database structure.',
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Smart Bulletin Board',
+    description:
+      'Utilize a Smart TV-powered Bulletin Board to facilitate access to diverse announcements, school maps, and the enrollment process within the school campus.',
+    techStacks: ['Next JS', 'MySQL'],
+    demoUrl: '',
+    gitHubRepoUrl: '',
+    image: 'img/sbb.png',
+    isTop: false,
+    order: 9,
+    moreInfo: [
+      {
+        title: 'Type',
+        content: ['Freelance Project'],
+      },
+      {
+        title: 'My Responsibilities',
+        content: [
+          'Set Project timeline.',
+          'Architect the application structure.',
         ],
       },
     ],
