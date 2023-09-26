@@ -55,6 +55,17 @@ export const portfolios: IPortfolio[] = [
     order: 3,
   },
   {
+    name: 'My Portfolio',
+    description:
+      'I showcase my skills and experience as a full stack developer. With a passion for creating interactive and user-friendly web applications.',
+    techStacks: ['React JS', 'Vite', 'Vercel', 'Daisy UI'],
+    demoUrl: 'https://marvindonina.vercel.app/',
+    gitHubRepoUrl: 'https://github.com/jbmarvin24/marvs-portfolio/',
+    image: 'img/my-portfolio.png',
+    isTop: false,
+    order: 3,
+  },
+  {
     name: 'CVM Finance Loan System',
     description:
       'CVM Finance in-house loan system that effectively automates various aspects of the loan lifecycle, including loan application processing, verification procedures, fund disbursement, repayment tracking, and much more.',
