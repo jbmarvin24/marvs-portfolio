@@ -133,7 +133,7 @@ export const portfolios: IPortfolio[] = [
     demoUrl: '',
     gitHubRepoUrl:
       'https://github.com/jbmarvin24/agfzb-CloudAppDevelopment_Capstone',
-    image: 'https://placehold.co/400x200?text=Sample',
+    image: '/img/car-dealership-review.png',
     isTop: false,
     order: 6,
     moreInfo: [
@@ -200,7 +200,7 @@ export const portfolios: IPortfolio[] = [
     techStacks: ['Next JS', 'Firebase'],
     demoUrl: '',
     gitHubRepoUrl: '',
-    image: 'https://placehold.co/400x200?text=Private',
+    image: '/img/pcap-admin.png',
     isTop: false,
     order: 8,
     moreInfo: [
@@ -211,6 +211,7 @@ export const portfolios: IPortfolio[] = [
       {
         title: 'My Responsibilities',
         content: [
+          'Authenticate using google account.',
           'Ensure the project is delivered on schedule.',
           'Design the user interface.',
           'Develop the business logic.',
