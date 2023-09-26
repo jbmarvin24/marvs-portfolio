@@ -92,9 +92,13 @@ const Portfolio: FunctionComponent<PortfolioProps> = () => {
               ))}
           </Carousel>
 
-          <div className="mt-5 mx-auto text-center">
-            <Link to="/portfolio" className="text-sm hover:underline">
-              Show all <FaArrowRight className="inline-block" />
+          <div className="mt-10 mx-auto text-center">
+            <Link
+              to="/portfolio"
+              className="link no-underline hover:underline font-medium text-primary"
+            >
+              Explore more
+              <FaArrowRight className="inline-block text-primary ml-2" />
             </Link>
           </div>
         </div>
