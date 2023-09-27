@@ -4,6 +4,6 @@ export const certifications = [
     issueBy: 'Coursera',
     skillsGain: ['Cloud Native App', 'Cloud Computing'],
     credentialUrl:
-      'https://www.coursera.org/account/accomplishments/professional-cert/29URQVDZYJRR',
+      'https://www.coursera.org/account/accomplishments/specialization/certificate/29URQVDZYJRR',
   },
 ];
