@@ -116,7 +116,7 @@ const Skills: FunctionComponent<SkillsProps> = () => {
                   </li>
                   <li>
                     <BsFillCircleFill className="text-primary inline-block w-2 h-2 mr-3" />
-                    Create reports for analysis.
+                    Build reports and dashboards for analysis.
                   </li>
                 </ul>
               </div>
