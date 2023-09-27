@@ -29,9 +29,13 @@ const About: FunctionComponent<AboutProps> = () => {
               functionality.
             </Paragraph>
             <div className="text-center">
-              <button className="btn btn-primary lg:mt-20 mt-14 text-white">
+              <a
+                href="https://drive.google.com/file/d/1Pz8ZaHv2XfZakmCwYDsOi7JyVtV8Pt--/view?usp=sharing"
+                target="_blank"
+                className="btn btn-primary lg:mt-20 mt-14 text-white"
+              >
                 Download CV <FiDownload className="w-5 h-5" />
-              </button>
+              </a>
             </div>
           </div>
         </div>
