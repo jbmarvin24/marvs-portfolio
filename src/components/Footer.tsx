@@ -57,14 +57,7 @@ const Footer: FunctionComponent<FooterProps> = () => {
           'text-gray-300': theme == 'light',
         })}
       >
-        &copy; John Marvin Doniña. All rights reserved |{' '}
-        <a
-          href="https://www.behance.net/213c339b"
-          className="text-xs mt-5"
-          target="_blank"
-        >
-          Designed by Мария Ларичева
-        </a>
+        &copy; John Marvin Doniña. All rights reserved
       </p>
     </footer>
   );
