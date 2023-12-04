@@ -33,8 +33,8 @@ const Hero: FunctionComponent<HeroProps> = () => {
                 </div>
               </div>
               <div className="avatar lg:ml-auto">
-                <div className="lg:w-72 w-52 mask mask-hexagon-2">
-                  <img src="https://placehold.co/300" />
+                <div className="lg:w-72 w-52 mask mask-squircle">
+                  <img src="img/marvs-hero.jpg" alt="Hero image" />
                 </div>
               </div>
             </div>
@@ -52,7 +52,10 @@ const Hero: FunctionComponent<HeroProps> = () => {
               A passionate Full Stack Developer with a deep love for turning
               ideas into digital realities.
             </Paragraph>
-            <a href="#contact" className="my-6 btn btn-primary capitalize">
+            <a
+              href="#contact"
+              className="my-6 btn btn-primary capitalize text-white"
+            >
               Contact Me
               <BiSend className="w-5 h-5" />
             </a>

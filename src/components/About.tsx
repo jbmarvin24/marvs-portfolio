@@ -17,7 +17,7 @@ const About: FunctionComponent<AboutProps> = () => {
           <div className="mx-auto my-auto">
             <div className="avatar">
               <div className="w-80 rounded-xl">
-                <img src="https://placehold.co/300" />
+                <img src="img/marvs-about.jpg" alt="About image" />
               </div>
             </div>
           </div>
