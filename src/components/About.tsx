@@ -30,7 +30,7 @@ const About: FunctionComponent<AboutProps> = () => {
             </Paragraph>
             <div className="text-center">
               <a
-                href="https://drive.google.com/file/d/1Pz8ZaHv2XfZakmCwYDsOi7JyVtV8Pt--/view?usp=sharing"
+                href="https://drive.google.com/file/d/13oMNHN9kJ-v3y4fLpWfNrh1Yj3Sg-g-E/view?usp=sharing"
                 target="_blank"
                 className="btn btn-primary lg:mt-20 mt-14 text-white"
               >
